@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{86E58BDE-5868-4A7D-8592-E4C7945AD257}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GregPostingsST10114245_PROG3B_POE</RootNamespace>
+    <AssemblyName>GregPostingsST10114245_PROG3B_POE</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\BooksGraphics.cs" />
+    <Compile Include="Classes\DeweyDecimalNumberGenerator.cs" />
+    <Compile Include="Classes\GameTimer.cs" />
+    <Compile Include="Classes\SortingAlgorithim.cs" />
+    <Compile Include="Forms\BoringGameOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BoringGameOne.Designer.cs">
+      <DependentUpon>BoringGameOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomMessageBox2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomMessageBox2.Designer.cs">
+      <DependentUpon>CustomMessageBox2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomMessageBox3cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomMessageBox3cs.Designer.cs">
+      <DependentUpon>CustomMessageBox3cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Game1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Game1.Designer.cs">
+      <DependentUpon>Game1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Game1GameMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Game1GameMode.Designer.cs">
+      <DependentUpon>Game1GameMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Game2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Game2.Designer.cs">
+      <DependentUpon>Game2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Game3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Game3.Designer.cs">
+      <DependentUpon>Game3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Levels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Levels.Designer.cs">
+      <DependentUpon>Levels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BookDrawing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\BookDrawing.Designer.cs">
+      <DependentUpon>BookDrawing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BookDrawing2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\BookDrawing2.Designer.cs">
+      <DependentUpon>BookDrawing2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Game1GameBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Game1GameBar.Designer.cs">
+      <DependentUpon>Game1GameBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Game1GameModeButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Game1GameModeButtons.Designer.cs">
+      <DependentUpon>Game1GameModeButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LevelButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\LevelButtons.Designer.cs">
+      <DependentUpon>LevelButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MainMenuButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainMenuButtons.Designer.cs">
+      <DependentUpon>MainMenuButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkingGameClasses\WGDeweyDecimalNumberGenerator.cs" />
+    <Compile Include="WorkingGameClasses\WGSortingAlgorithims.cs" />
+    <EmbeddedResource Include="Forms\BoringGameOne.resx">
+      <DependentUpon>BoringGameOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomMessageBox2.resx">
+      <DependentUpon>CustomMessageBox2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomMessageBox3cs.resx">
+      <DependentUpon>CustomMessageBox3cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Game1.resx">
+      <DependentUpon>Game1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Game1GameMode.resx">
+      <DependentUpon>Game1GameMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Game2.resx">
+      <DependentUpon>Game2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Game3.resx">
+      <DependentUpon>Game3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Levels.resx">
+      <DependentUpon>Levels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\BookDrawing.resx">
+      <DependentUpon>BookDrawing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\BookDrawing2.resx">
+      <DependentUpon>BookDrawing2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Game1GameBar.resx">
+      <DependentUpon>Game1GameBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Game1GameModeButtons.resx">
+      <DependentUpon>Game1GameModeButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\LevelButtons.resx">
+      <DependentUpon>LevelButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MainMenuButtons.resx">
+      <DependentUpon>MainMenuButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\BookQuestion.png" />
+    <Content Include="Images\Books1.jpg" />
+    <Content Include="Images\Books2.jpg" />
+    <Content Include="Images\Bronze Achievement.png" />
+    <Content Include="Images\Gold Achievement.png" />
+    <Content Include="Images\Silver Achievement.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

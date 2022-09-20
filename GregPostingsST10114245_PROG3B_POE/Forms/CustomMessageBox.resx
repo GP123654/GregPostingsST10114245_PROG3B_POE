@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Hello, Welcome to: Where that book go?
+
+Introduction:
+
+The dewey decimal system is comprised of two sets of numbers and one set of letters.
+Each of these set normally comprise of three digets and characters. EG. 112.234.GZH
+
+Each of these letters and numbers mean different things when categorizing and organizing books.
+The numbers are for different topics and categories/ knowledge areas of books that
+get more defined by each number. The thee characters are the author of the book. 
+We will explain more in later games.
+
+The Game:
+
+In this game you will have to sort the books according to their call numbers. You will
+have to sort them first by their numbers and then by the authors letters in ascending order.
+
+How To Play:
+
+There will be two boxes displayed that represent the book cart and the book shelf.
+You will have to take the books (their call numbers) from the book cart and put them
+into the book shelf in the correct ascending order according to their call numbers.
+
+You can drag books from the book cart into the book shelf using your left mouse button.
+If you have put a book in the incorrect order you can click on the book and use the move 
+up and down buttons to reorder them.
+
+Click the start button to begin. Have Fun :) </value>
+  </data>
+</root>
