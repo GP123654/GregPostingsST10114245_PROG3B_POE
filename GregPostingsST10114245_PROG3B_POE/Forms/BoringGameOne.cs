@@ -264,37 +264,44 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         /// <param name="e"></param>
         private void MoveUpBtn_Click(object sender, EventArgs e)
         {
-            //If the user selects a valid item
-            if (this.bookShelfSortedListBox.SelectedItem != null)
+            try
             {
-                //Stores the selected items index into an int called index
-                int index = this.bookShelfSortedListBox.SelectedIndex;
-                //Stores the selected item as a string in a string called selectedBook
-                string selectedBook = this.bookShelfSortedListBox.SelectedItem.ToString();
-
-                //If the index is bigger than 0 (so the top one cannot move up)
-                if (index > 0)
+                //If the user selects a valid item
+                if (this.bookShelfSortedListBox.SelectedItem != null)
                 {
-                    //The item at that index will be removed
-                    this.bookShelfSortedListBox.Items.RemoveAt(index);
-                    //Then the item will be inserted at an index one higher with its information
-                    this.bookShelfSortedListBox.Items.Insert(index - 1, selectedBook);
-                    //It keeps the selected item at its new position selected
-                    this.bookShelfSortedListBox.SetSelected(index - 1, true);
+                    //Stores the selected items index into an int called index
+                    int index = this.bookShelfSortedListBox.SelectedIndex;
+                    //Stores the selected item as a string in a string called selectedBook
+                    string selectedBook = this.bookShelfSortedListBox.SelectedItem.ToString();
+
+                    //If the index is bigger than 0 (so the top one cannot move up)
+                    if (index > 0)
+                    {
+                        //The item at that index will be removed
+                        this.bookShelfSortedListBox.Items.RemoveAt(index);
+                        //Then the item will be inserted at an index one higher with its information
+                        this.bookShelfSortedListBox.Items.Insert(index - 1, selectedBook);
+                        //It keeps the selected item at its new position selected
+                        this.bookShelfSortedListBox.SetSelected(index - 1, true);
+                    }
+
+                    /** Calling the SuccessfulCompletionCheck Method */
+                    SuccessfulCompletionCheck();
+
+                    /** Calling the IncreaseNumberOfMoves Method */
+                    IncreaseNumberOfMoves();
                 }
-
-                /** Calling the SuccessfulCompletionCheck Method */
-                SuccessfulCompletionCheck();
-
-                /** Calling the IncreaseNumberOfMoves Method */
-                IncreaseNumberOfMoves();
+                else
+                {
+                    //Error message
+                    MessageBox.Show("Please select a valid item");
+                }
             }
-            else
+            catch (Exception ex)
             {
                 //Error message
-                MessageBox.Show("Please select a valid item");
+                MessageBox.Show("Error is: " + ex);
             }
-
         }
 
         //----------------------------------------------------------------------------------------------//
@@ -305,36 +312,44 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         /// <param name="e"></param>
         private void MoveDownBtn_Click(object sender, EventArgs e)
         {
-            //If the user selects a valid item
-            if (this.bookShelfSortedListBox.SelectedItem != null)
+            try
             {
-                //Stores the selected items index into an int called index
-                int index = this.bookShelfSortedListBox.SelectedIndex;
-                //Stores the selected item as a string in a string called selectedBook
-                string selectedBook = this.bookShelfSortedListBox.SelectedItem.ToString();
-
-                //If the index is less than the number of items - 1 (so the last one cannot move down)
-                if (index < this.bookShelfSortedListBox.Items.Count - 1)
+                //If the user selects a valid item
+                if (this.bookShelfSortedListBox.SelectedItem != null)
                 {
-                    //The item at that index will be removed
-                    this.bookShelfSortedListBox.Items.RemoveAt(index);
-                    //Then the item will be inserted at an index one lower with its information
-                    this.bookShelfSortedListBox.Items.Insert(index + 1, selectedBook);
-                    //It keeps the selected item at its new position selected
-                    this.bookShelfSortedListBox.SetSelected(index + 1, true);
+                    //Stores the selected items index into an int called index
+                    int index = this.bookShelfSortedListBox.SelectedIndex;
+                    //Stores the selected item as a string in a string called selectedBook
+                    string selectedBook = this.bookShelfSortedListBox.SelectedItem.ToString();
+
+                    //If the index is less than the number of items - 1 (so the last one cannot move down)
+                    if (index < this.bookShelfSortedListBox.Items.Count - 1)
+                    {
+                        //The item at that index will be removed
+                        this.bookShelfSortedListBox.Items.RemoveAt(index);
+                        //Then the item will be inserted at an index one lower with its information
+                        this.bookShelfSortedListBox.Items.Insert(index + 1, selectedBook);
+                        //It keeps the selected item at its new position selected
+                        this.bookShelfSortedListBox.SetSelected(index + 1, true);
+                    }
+
+
+                    /** Calling the SuccessfulCompletionCheck Method */
+                    SuccessfulCompletionCheck();
+
+                    /** Calling the IncreaseNumberOfMoves Method */
+                    IncreaseNumberOfMoves();
                 }
-
-
-                /** Calling the SuccessfulCompletionCheck Method */
-                SuccessfulCompletionCheck();
-
-                /** Calling the IncreaseNumberOfMoves Method */
-                IncreaseNumberOfMoves();
+                else
+                {
+                    //Error message
+                    MessageBox.Show("Please select a valid item");
+                }
             }
-            else
+            catch (Exception ex)
             {
                 //Error message
-                MessageBox.Show("Please select a valid item");
+                MessageBox.Show("Error is: " + ex);
             }
         }
 
@@ -349,7 +364,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             try
             {
                 /** Calling the GenerateAndDisplyRandomNumbers Method */
-                this.wGDeweyDecimalNumberGenerator.GenerateAndDisplyRandomNumbers(bookCartUnsortedListBox);
+                this.wGDeweyDecimalNumberGenerator.GenerateAndDisplyRandomNumbers(this.bookCartUnsortedListBox);
                 //Starts the boringGameTimer timer
                 this.boringGameTimer.Start();
                 //Hides the startBtn button
@@ -383,7 +398,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
                 this.tryAgainBtn.Visible = false;
 
                 /** Calling the GenerateAndDisplyRandomNumbers Method */
-                this.wGDeweyDecimalNumberGenerator.GenerateAndDisplyRandomNumbers(bookCartUnsortedListBox);
+                this.wGDeweyDecimalNumberGenerator.GenerateAndDisplyRandomNumbers(this.bookCartUnsortedListBox);
                 //Starts the timer
                 this.boringGameTimer.Start();
 
@@ -607,47 +622,55 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         /// </summary>
         public void SuccessfulCompletionCheck()
         {
-            //If the the number of items in the correct order is equal to 10
-            if (this.itemCheckCount.ToString().Equals("9"))
+            try
             {
-                //This stops the boringGameTimer timer
-                this.boringGameTimer.Stop();
-
-                //Creating an object of the CustomMessageBox2 form
-                CustomMessageBox2 customMessageBox2 = new CustomMessageBox2();
-                //Setting the message to the congradulations message
-                customMessageBox2.CongradulationsMessage();
-
-                //If the seconds left after the timer stops is more than or equal to 15
-                if (s >= 15)
+                //If the the number of items in the correct order is equal to 10
+                if (this.itemCheckCount.ToString().Equals("9"))
                 {
-                    //Shows the achievementImage1 gold achievement image
-                    customMessageBox2.achievementImage1.Visible = true;
-                }
-                //If the seconds left after the timer stops is less than or equal to 14 and more than or equal to 6
-                if (s <= 14 && s >= 6)
-                {
-                    //Shows the achievementImage2 silver achievement image
-                    customMessageBox2.achievementImage2.Visible = true;
-                }
-                //Otherwise if the seconds left after the timer stops is less than or equal to 5 and more than 0
-                else if (s <= 5 && s > 0)
-                {
-                    //Shows the achievementImage3 bronze achievement image
-                    customMessageBox2.achievementImage3.Visible = true;
-                }
+                    //This stops the boringGameTimer timer
+                    this.boringGameTimer.Stop();
 
-                //Showing the CustomMessageBox2 form
-                customMessageBox2.Show();
+                    //Creating an object of the CustomMessageBox2 form
+                    CustomMessageBox2 customMessageBox2 = new CustomMessageBox2();
+                    //Setting the message to the congradulations message
+                    customMessageBox2.CongradulationsMessage();
 
-                //Makes the tryAgainBtn button visible
-                this.tryAgainBtn.Visible = true;
+                    //If the seconds left after the timer stops is more than or equal to 15
+                    if (s >= 15)
+                    {
+                        //Shows the achievementImage1 gold achievement image
+                        customMessageBox2.achievementImage1.Visible = true;
+                    }
+                    //If the seconds left after the timer stops is less than or equal to 14 and more than or equal to 6
+                    if (s <= 14 && s >= 6)
+                    {
+                        //Shows the achievementImage2 silver achievement image
+                        customMessageBox2.achievementImage2.Visible = true;
+                    }
+                    //Otherwise if the seconds left after the timer stops is less than or equal to 5 and more than 0
+                    else if (s <= 5 && s > 0)
+                    {
+                        //Shows the achievementImage3 bronze achievement image
+                        customMessageBox2.achievementImage3.Visible = true;
+                    }
+
+                    //Showing the CustomMessageBox2 form
+                    customMessageBox2.Show();
+
+                    //Makes the tryAgainBtn button visible
+                    this.tryAgainBtn.Visible = true;
+                }
+                //Otherwise it will continue to check if the items are in the correct order
+                else
+                {
+                    /** Calling the CheckCallNumberOrder Method */
+                    CheckCallNumberOrder();
+                }
             }
-            //Otherwise it will continue to check if the items are in the correct order
-            else
+            catch (Exception ex)
             {
-                /** Calling the CheckCallNumberOrder Method */
-                CheckCallNumberOrder();
+                //Error message
+                MessageBox.Show("Error is: " + ex);
             }
         }
 
@@ -657,22 +680,30 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         /// </summary>
         public void CheckCallNumberOrder()
         {
-            //For as long as bookShelfSortedListBox listBox item count is more than 0
-            for (int i = 0; i < this.bookShelfSortedListBox.Items.Count; i++)
+            try
             {
-                //If the bookShelfSortedListBox listBox items are equal to the checkOrderListBox ListBox items at the same index/ location
-                if (this.bookShelfSortedListBox.Items[i] == this.checkOrderListBox.Items[i])
+                //For as long as bookShelfSortedListBox listBox item count is more than 0
+                for (int i = 0; i < this.bookShelfSortedListBox.Items.Count; i++)
                 {
-                    //Making the items in the checkOrderListBox equal 1 when it is correct
-                    //so that the indexes don't change but it does'nt add multiple points
-                    this.checkOrderListBox.Items[i] = 1;
-                    //Increases the number of items in the correct order by 1 each time 
-                    this.itemCheckCount++;
-                    /** Calling the CheckCallNumberOrder Method */
-                    IncreaseProgressBar();
-                    //Changing the numCorrectLbl label to display the number of correct items
-                    this.numCorrectLbl.Text = itemCheckCount.ToString();
+                    //If the bookShelfSortedListBox listBox items are equal to the checkOrderListBox ListBox items at the same index/ location
+                    if (this.bookShelfSortedListBox.Items[i] == this.checkOrderListBox.Items[i])
+                    {
+                        //Making the items in the checkOrderListBox equal 1 when it is correct
+                        //so that the indexes don't change but it does'nt add multiple points
+                        this.checkOrderListBox.Items[i] = 1;
+                        //Increases the number of items in the correct order by 1 each time 
+                        this.itemCheckCount++;
+                        /** Calling the CheckCallNumberOrder Method */
+                        IncreaseProgressBar();
+                        //Changing the numCorrectLbl label to display the number of correct items
+                        this.numCorrectLbl.Text = itemCheckCount.ToString();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
             }
         }
 
@@ -682,12 +713,20 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         /// </summary>
         public void IncreaseProgressBar()
         {
-            //Setting the totalProgressBar value to equal the progressBar value plus 10
-            this.totalProgressBar = this.progressBar + 10;
-            //Setting the progressBar value to equal the totalProgressBar value
-            this.progressBar = this.totalProgressBar;
-            //Setting the value of the gameProgressBar progress bar to equal the totalProgressBar value
-            this.gameProgressBar.Value = this.totalProgressBar;
+            try
+            {
+                //Setting the totalProgressBar value to equal the progressBar value plus 10
+                this.totalProgressBar = this.progressBar + 10;
+                //Setting the progressBar value to equal the totalProgressBar value
+                this.progressBar = this.totalProgressBar;
+                //Setting the value of the gameProgressBar progress bar to equal the totalProgressBar value
+                this.gameProgressBar.Value = this.totalProgressBar;
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }
         }
 
         //----------------------------------------------------------------------------------------------//
@@ -696,12 +735,20 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         /// </summary>
         public void IncreaseNumberOfMoves()
         {
-            //Setting the totalNumberOfMoves value to equal the numberOfMoves value plus 1
-            this.totalNumberOfMoves = this.numberOfMoves + 1;
-            //Setting the numberOfMoves value to equal the totalNumberOfMoves value
-            this.numberOfMoves = this.totalNumberOfMoves;
-            //Setting the text of the numMovesMadeLbl label to equal the totalNumberOfMoves value
-            this.numMovesMadeLbl.Text = (this.totalNumberOfMoves).ToString();
+            try
+            {
+                //Setting the totalNumberOfMoves value to equal the numberOfMoves value plus 1
+                this.totalNumberOfMoves = this.numberOfMoves + 1;
+                //Setting the numberOfMoves value to equal the totalNumberOfMoves value
+                this.numberOfMoves = this.totalNumberOfMoves;
+                //Setting the text of the numMovesMadeLbl label to equal the totalNumberOfMoves value
+                this.numMovesMadeLbl.Text = (this.totalNumberOfMoves).ToString();
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }
         }
 
         #endregion
@@ -724,22 +771,30 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         /// </summary>
         public void SortList()
         {
-            //Clearing the values of the checkOrderListBox listBox
-            this.checkOrderListBox.Items.Clear();
-            //Sorting the deweyNums List<string>
-            this.wGDeweyDecimalNumberGenerator.deweyNums.Sort();
-
-            //Other sorting methods 
-            //wGSortingAlgorithims.EasySort(checkOrderListBox);
-            //wGSortingAlgorithims.EasySortWithLINQ(checkOrderListBox);
-            //wGSortingAlgorithims.BubbleSort(this.wGDeweyDecimalNumberGenerator.deweyNums.ToArray());
-            //wGSortingAlgorithims.QuickSort(this.wGDeweyDecimalNumberGenerator.deweyNums.ToArray());
-
-            //For each number in the deweyNums List<string> 
-            foreach (var num in this.wGDeweyDecimalNumberGenerator.deweyNums)
+            try
             {
-                //Will be added to the checkOrderListBox listBox in the sorted order
-                this.checkOrderListBox.Items.Add(num);
+                //Clearing the values of the checkOrderListBox listBox
+                this.checkOrderListBox.Items.Clear();
+                //Sorting the deweyNums List<string>
+                this.wGDeweyDecimalNumberGenerator.deweyNums.Sort();
+
+                //Other sorting methods 
+                //wGSortingAlgorithims.EasySort(checkOrderListBox);
+                //wGSortingAlgorithims.EasySortWithLINQ(checkOrderListBox);
+                //wGSortingAlgorithims.BubbleSort(this.wGDeweyDecimalNumberGenerator.deweyNums.ToArray());
+                //wGSortingAlgorithims.QuickSort(this.wGDeweyDecimalNumberGenerator.deweyNums.ToArray());
+
+                //For each number in the deweyNums List<string> 
+                foreach (var num in this.wGDeweyDecimalNumberGenerator.deweyNums)
+                {
+                    //Will be added to the checkOrderListBox listBox in the sorted order
+                    this.checkOrderListBox.Items.Add(num);
+                }
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
             }
         }
 
@@ -764,12 +819,20 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         /// <param name="e"></param>
         private void BoringGameOne_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //Creating an object of the Form1 form
-            Form1 mainMenu = new Form1();
-            //Showing the Form1 form
-            mainMenu.Show();
-            //Hiding the Game Mode Menu / Game1GameMode form
-            this.Hide();
+            try
+            {
+                //Creating an object of the Form1 form
+                Form1 mainMenu = new Form1();
+                //Showing the Form1 form
+                mainMenu.Show();
+                //Hiding the Game Mode Menu / Game1GameMode form
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }
         }
 
         #endregion

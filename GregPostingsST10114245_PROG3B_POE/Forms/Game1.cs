@@ -23,6 +23,14 @@ namespace GregPostingsST10114245_PROG3B_POE
     public partial class Game1 : Form
     {
 
+        ////////////////////////////////////////////////////////
+        // These are different variables that are being declared.
+        ////////////////////////////////////////////////////////
+
+        //Variables
+
+        #region Variables
+
         /// <summary>
         /// 
         /// </summary>
@@ -37,6 +45,8 @@ namespace GregPostingsST10114245_PROG3B_POE
         /// 
         /// </summary>
         BookDrawing[] bookDrawings = new BookDrawing[10];
+
+        #endregion
 
 
         ////////////////////////////////////////////////////////
@@ -92,6 +102,14 @@ namespace GregPostingsST10114245_PROG3B_POE
         #endregion
 
 
+        ////////////////////////////////////////////////////////
+        // These are all the button click methods.
+        ////////////////////////////////////////////////////////
+
+        //Button Click Methods
+
+        #region Button Clicks
+
         /// <summary>
         /// 
         /// </summary>
@@ -110,6 +128,17 @@ namespace GregPostingsST10114245_PROG3B_POE
             timer1.Start();
         }
 
+        #endregion
+
+
+        ////////////////////////////////////////////////////////
+        // This is for when the Game1 form is closing.
+        ////////////////////////////////////////////////////////
+
+        //Game1 Form Closing Method
+
+        #region Game1 Form Closing Method
+
         /// <summary>
         /// Goes back to the main menu
         /// </summary>
@@ -125,9 +154,16 @@ namespace GregPostingsST10114245_PROG3B_POE
             this.Hide();
         }
 
+        #endregion
 
 
-        //--------------------------------------------------------------------------------------------
+        ////////////////////////////////////////////////////////
+        // These are methods to start and keep track of the time.
+        ////////////////////////////////////////////////////////
+
+        //Timer Methods
+
+        #region Timer
 
         int s = 0;
         int m = 0;
@@ -158,6 +194,18 @@ namespace GregPostingsST10114245_PROG3B_POE
             
         }
 
+        #endregion
+
+
+        ////////////////////////////////////////////////////////
+        // This is used for the dragging and dropping of call
+        // numbers from the book cart to the book shelf.
+        ////////////////////////////////////////////////////////
+
+        //Drag And Drop Methods
+
+        #region Drag And Drop
+
         /// <summary>
         /// 
         /// </summary>
@@ -187,6 +235,9 @@ namespace GregPostingsST10114245_PROG3B_POE
         {
             //flowLayoutPanel2.Parent = e.Data.GetData(flowLayoutPanel2.Controls.GetChildIndex());
         }
+
+        #endregion
+
     }
 }
 //------------------------------------ooo000 END OF FILE 000ooo---------------------------------------------//
