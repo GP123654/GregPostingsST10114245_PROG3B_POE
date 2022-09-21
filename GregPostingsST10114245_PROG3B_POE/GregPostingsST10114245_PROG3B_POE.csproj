@@ -206,6 +206,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -227,6 +228,11 @@
     <Content Include="Images\Bronze Achievement.png" />
     <Content Include="Images\Gold Achievement.png" />
     <Content Include="Images\Silver Achievement.png" />
+    <None Include="Resources\Bronze Achievement.png" />
+    <None Include="Resources\Silver Achievement.png" />
+    <None Include="Resources\Gold Achievement.png" />
+    <None Include="Resources\BookQuestion.png" />
+    <None Include="Resources\Books1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

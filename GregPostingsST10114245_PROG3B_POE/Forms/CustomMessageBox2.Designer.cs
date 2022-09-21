@@ -29,15 +29,14 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomMessageBox2));
             this.panel2 = new System.Windows.Forms.Panel();
             this.ExitBtn = new System.Windows.Forms.Button();
-            this.achievementImage3 = new System.Windows.Forms.PictureBox();
-            this.achievementImage2 = new System.Windows.Forms.PictureBox();
-            this.achievementImage1 = new System.Windows.Forms.PictureBox();
             this.messageTextLbl = new System.Windows.Forms.Label();
             this.PlayTryAgainBtn = new System.Windows.Forms.Button();
             this.messageTitleLbl = new System.Windows.Forms.Label();
+            this.achievementImage3 = new System.Windows.Forms.PictureBox();
+            this.achievementImage2 = new System.Windows.Forms.PictureBox();
+            this.achievementImage1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.achievementImage3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.achievementImage2)).BeginInit();
@@ -79,39 +78,6 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
-            // achievementImage3
-            // 
-            this.achievementImage3.Image = ((System.Drawing.Image)(resources.GetObject("achievementImage3.Image")));
-            this.achievementImage3.Location = new System.Drawing.Point(140, 213);
-            this.achievementImage3.Name = "achievementImage3";
-            this.achievementImage3.Size = new System.Drawing.Size(74, 66);
-            this.achievementImage3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.achievementImage3.TabIndex = 7;
-            this.achievementImage3.TabStop = false;
-            this.achievementImage3.Visible = false;
-            // 
-            // achievementImage2
-            // 
-            this.achievementImage2.Image = ((System.Drawing.Image)(resources.GetObject("achievementImage2.Image")));
-            this.achievementImage2.Location = new System.Drawing.Point(89, 213);
-            this.achievementImage2.Name = "achievementImage2";
-            this.achievementImage2.Size = new System.Drawing.Size(74, 66);
-            this.achievementImage2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.achievementImage2.TabIndex = 6;
-            this.achievementImage2.TabStop = false;
-            this.achievementImage2.Visible = false;
-            // 
-            // achievementImage1
-            // 
-            this.achievementImage1.Image = ((System.Drawing.Image)(resources.GetObject("achievementImage1.Image")));
-            this.achievementImage1.Location = new System.Drawing.Point(31, 213);
-            this.achievementImage1.Name = "achievementImage1";
-            this.achievementImage1.Size = new System.Drawing.Size(74, 66);
-            this.achievementImage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.achievementImage1.TabIndex = 5;
-            this.achievementImage1.TabStop = false;
-            this.achievementImage1.Visible = false;
-            // 
             // messageTextLbl
             // 
             this.messageTextLbl.AutoSize = true;
@@ -151,6 +117,39 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.messageTitleLbl.Size = new System.Drawing.Size(33, 15);
             this.messageTitleLbl.TabIndex = 5;
             this.messageTitleLbl.Text = "Info";
+            // 
+            // achievementImage3
+            // 
+            this.achievementImage3.Image = global::GregPostingsST10114245_PROG3B_POE.Properties.Resources.Bronze_Achievement;
+            this.achievementImage3.Location = new System.Drawing.Point(140, 213);
+            this.achievementImage3.Name = "achievementImage3";
+            this.achievementImage3.Size = new System.Drawing.Size(74, 66);
+            this.achievementImage3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.achievementImage3.TabIndex = 7;
+            this.achievementImage3.TabStop = false;
+            this.achievementImage3.Visible = false;
+            // 
+            // achievementImage2
+            // 
+            this.achievementImage2.Image = global::GregPostingsST10114245_PROG3B_POE.Properties.Resources.Silver_Achievement;
+            this.achievementImage2.Location = new System.Drawing.Point(89, 213);
+            this.achievementImage2.Name = "achievementImage2";
+            this.achievementImage2.Size = new System.Drawing.Size(74, 66);
+            this.achievementImage2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.achievementImage2.TabIndex = 6;
+            this.achievementImage2.TabStop = false;
+            this.achievementImage2.Visible = false;
+            // 
+            // achievementImage1
+            // 
+            this.achievementImage1.Image = global::GregPostingsST10114245_PROG3B_POE.Properties.Resources.Gold_Achievement;
+            this.achievementImage1.Location = new System.Drawing.Point(31, 213);
+            this.achievementImage1.Name = "achievementImage1";
+            this.achievementImage1.Size = new System.Drawing.Size(74, 66);
+            this.achievementImage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.achievementImage1.TabIndex = 5;
+            this.achievementImage1.TabStop = false;
+            this.achievementImage1.Visible = false;
             // 
             // CustomMessageBox2
             // 

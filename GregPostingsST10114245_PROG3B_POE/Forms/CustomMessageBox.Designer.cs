@@ -84,7 +84,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::GregPostingsST10114245_PROG3B_POE.Properties.Resources.BookQuestion;
             this.pictureBox1.Location = new System.Drawing.Point(596, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(66, 50);

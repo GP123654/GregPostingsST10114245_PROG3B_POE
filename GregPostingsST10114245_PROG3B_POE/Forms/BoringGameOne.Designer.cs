@@ -30,7 +30,6 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BoringGameOne));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bookCartUnsortedListBox = new System.Windows.Forms.ListBox();
             this.bookShelfSortedListBox = new System.Windows.Forms.ListBox();
@@ -56,7 +55,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::GregPostingsST10114245_PROG3B_POE.Properties.Resources.Books1;
             this.pictureBox1.Location = new System.Drawing.Point(0, 382);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1134, 329);

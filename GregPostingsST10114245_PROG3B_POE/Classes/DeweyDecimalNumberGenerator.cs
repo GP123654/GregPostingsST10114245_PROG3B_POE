@@ -1,51 +1,87 @@
-﻿using System;
+﻿/*
+ * Done By: Greg Postings ST10114245 
+ * Module: PROG 3B
+ * Class: BCA3 G7
+ * Task: POE Task 1
+ * Start Date and Time: 10 September 2022 at 14:30
+ * Finish Date and Time: 21 September 2022 at 16:45
+ * 
+ */
+
+
+//Imports
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
+//Package
 namespace GregPostingsST10114245_PROG3B_POE.Classes
 {
+    //Class
     class DeweyDecimalNumberGenerator
     {
+        ////////////////////////////////////////////////////////
+        // These are different variables that are being declared
+        // and some are being initialized as well. They are used
+        // for storing different values and some are objects of
+        // classes.
+        ////////////////////////////////////////////////////////
+
+        //Variables
+
+        #region Variables
+
+        //----------------------------------------------------------------------------------------------//
+        //Variables
+
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Creating an object of the Random class
+        /// </summary>
         private Random random = new Random();
+
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Creating a char array for the letters that are available for the random author letters
+        /// </summary>
         private char[] letters = "abcdefghijklmnopqrstuvwxyz".ToArray();
+
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Creating a char array for the numbers that are available for the random topic numbers
+        /// </summary>
         private char[] numbers = "1234567890".ToArray();
+
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// A string to store the randomly generated letters
+        /// </summary>
         private string randomLetters;
+
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// A string to store the randomly generated topic numbers
+        /// </summary>
         private string random3DigetNumbers;
-        private int randomNumbers;
 
-        private string de;
-
-
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Creating a List<string> to store the the randomly generated dewey decimal numbers
+        /// </summary>
         public List<string> deweyNums = new List<string>();
-        //public List<string> DeweyNums { get; set; }
-        //Game1 g1 = new Game1();
-        
-        
-        //public void StoreDeweyNums()
-        //{
-        //    for (int i = 0; i < 10; i++)
-        //    {
-        //        DeweyNums.Add(RandomDNumber());
-        //    }
-        //}
+
+        #endregion
 
 
+        //Random Number Generator Methods
 
+        #region Random Number Generator
 
-
-
-        //public void DisplayList(Label a, List<string> list)
-        //{
-        //    for (int i = 0; i < list.Count; i++)
-        //    {
-        //        a.Text = list[i];
-        //    }
-        //}
-
-
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Creates the random dewey decimal call number
+        /// </summary>
+        /// <returns></returns>
         public string RandomDNumber()
         {
             //int one = RandomNum(3); //Could just make it random.Next(0, 999)
@@ -61,9 +97,11 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
             return deweyDecimal;
         }
 
-
-
-
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Creates the random letters for the author
+        /// </summary>
+        /// <param name="numOfLetters"></param>
         private string RandomAuthor(int numOfLetters)
         {
             randomLetters = null;
@@ -74,6 +112,12 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
             return randomLetters.ToUpper();
         }
 
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Creates the random numbers for the topics
+        /// </summary>
+        /// <param name="numOfNumbers"></param>
+        /// <returns></returns>
         private string Random3DigetNum(int numOfNumbers)
         {
             random3DigetNumbers = null;
@@ -84,6 +128,36 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
             return random3DigetNumbers;
         }
 
+        #endregion
+
+
+
+        //TESTS
+
+        #region Tests
+
+        //public List<string> DeweyNums { get; set; }
+        //Game1 g1 = new Game1();
+
+
+        //public void StoreDeweyNums()
+        //{
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        DeweyNums.Add(RandomDNumber());
+        //    }
+        //}
+
+
+        //public void DisplayList(Label a, List<string> list)
+        //{
+        //    for (int i = 0; i < list.Count; i++)
+        //    {
+        //        a.Text = list[i];
+        //    }
+        //}
+
+
         //private int RandomNum(int numOfNumbers)
         //{
         //    randomNumbers = 0;
@@ -93,5 +167,8 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
         //    }
         //    return randomNumbers;
         //}
+
+        #endregion
     }
 }
+//---------------------------------------ooo000 END OF FILE 000ooo--------------------------------------//
