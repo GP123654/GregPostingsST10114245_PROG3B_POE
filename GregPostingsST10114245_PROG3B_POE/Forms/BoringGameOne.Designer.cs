@@ -32,8 +32,8 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BoringGameOne));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BookCartUnsortedListBox = new System.Windows.Forms.ListBox();
-            this.BookShelfSortedListBox = new System.Windows.Forms.ListBox();
+            this.bookCartUnsortedListBox = new System.Windows.Forms.ListBox();
+            this.bookShelfSortedListBox = new System.Windows.Forms.ListBox();
             this.moveUpBtn = new System.Windows.Forms.Button();
             this.moveDownBtn = new System.Windows.Forms.Button();
             this.startBtn = new System.Windows.Forms.Button();
@@ -42,13 +42,14 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.numCorrectLbl = new System.Windows.Forms.Label();
             this.numMovesMadeLbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.gameProgressBar = new System.Windows.Forms.ProgressBar();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.checkOrder = new System.Windows.Forms.ListBox();
+            this.checkOrderListBox = new System.Windows.Forms.ListBox();
+            this.tryAgainBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,35 +64,35 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // BookCartUnsortedListBox
+            // bookCartUnsortedListBox
             // 
-            this.BookCartUnsortedListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.BookCartUnsortedListBox.Font = new System.Drawing.Font("Georgia", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BookCartUnsortedListBox.ForeColor = System.Drawing.Color.MediumPurple;
-            this.BookCartUnsortedListBox.FormattingEnabled = true;
-            this.BookCartUnsortedListBox.ItemHeight = 20;
-            this.BookCartUnsortedListBox.Location = new System.Drawing.Point(72, 110);
-            this.BookCartUnsortedListBox.Name = "BookCartUnsortedListBox";
-            this.BookCartUnsortedListBox.Size = new System.Drawing.Size(199, 224);
-            this.BookCartUnsortedListBox.TabIndex = 1;
-            this.BookCartUnsortedListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BookCartUnsortedListBox_MouseDown);
+            this.bookCartUnsortedListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.bookCartUnsortedListBox.Font = new System.Drawing.Font("Georgia", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookCartUnsortedListBox.ForeColor = System.Drawing.Color.MediumPurple;
+            this.bookCartUnsortedListBox.FormattingEnabled = true;
+            this.bookCartUnsortedListBox.ItemHeight = 20;
+            this.bookCartUnsortedListBox.Location = new System.Drawing.Point(72, 110);
+            this.bookCartUnsortedListBox.Name = "bookCartUnsortedListBox";
+            this.bookCartUnsortedListBox.Size = new System.Drawing.Size(199, 224);
+            this.bookCartUnsortedListBox.TabIndex = 1;
+            this.bookCartUnsortedListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BookCartUnsortedListBox_MouseDown);
             // 
-            // BookShelfSortedListBox
+            // bookShelfSortedListBox
             // 
-            this.BookShelfSortedListBox.AllowDrop = true;
-            this.BookShelfSortedListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.BookShelfSortedListBox.Font = new System.Drawing.Font("Georgia", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BookShelfSortedListBox.ForeColor = System.Drawing.Color.MediumPurple;
-            this.BookShelfSortedListBox.FormattingEnabled = true;
-            this.BookShelfSortedListBox.ItemHeight = 20;
-            this.BookShelfSortedListBox.Location = new System.Drawing.Point(382, 110);
-            this.BookShelfSortedListBox.Name = "BookShelfSortedListBox";
-            this.BookShelfSortedListBox.Size = new System.Drawing.Size(199, 224);
-            this.BookShelfSortedListBox.TabIndex = 2;
-            this.BookShelfSortedListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.BookShelfSortedListBox_DragDrop);
-            this.BookShelfSortedListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.BookShelfSortedListBox_DragEnter);
-            this.BookShelfSortedListBox.DragOver += new System.Windows.Forms.DragEventHandler(this.BookShelfSortedListBox_DragOver);
-            this.BookShelfSortedListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BookShelfSortedListBox_MouseDown);
+            this.bookShelfSortedListBox.AllowDrop = true;
+            this.bookShelfSortedListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.bookShelfSortedListBox.Font = new System.Drawing.Font("Georgia", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookShelfSortedListBox.ForeColor = System.Drawing.Color.MediumPurple;
+            this.bookShelfSortedListBox.FormattingEnabled = true;
+            this.bookShelfSortedListBox.ItemHeight = 20;
+            this.bookShelfSortedListBox.Location = new System.Drawing.Point(382, 110);
+            this.bookShelfSortedListBox.Name = "bookShelfSortedListBox";
+            this.bookShelfSortedListBox.Size = new System.Drawing.Size(199, 224);
+            this.bookShelfSortedListBox.TabIndex = 2;
+            this.bookShelfSortedListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.BookShelfSortedListBox_DragDrop);
+            this.bookShelfSortedListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.BookShelfSortedListBox_DragEnter);
+            this.bookShelfSortedListBox.DragOver += new System.Windows.Forms.DragEventHandler(this.BookShelfSortedListBox_DragOver);
+            this.bookShelfSortedListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BookShelfSortedListBox_MouseDown);
             // 
             // moveUpBtn
             // 
@@ -161,7 +162,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             // boringGameTimer
             // 
             this.boringGameTimer.Interval = 10;
-            this.boringGameTimer.Tick += new System.EventHandler(this.boringGameTimer_Tick);
+            this.boringGameTimer.Tick += new System.EventHandler(this.BoringGameTimer_Tick);
             // 
             // numCorrectLbl
             // 
@@ -196,12 +197,12 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.label5.TabIndex = 18;
             this.label5.Text = "/ 10";
             // 
-            // progressBar1
+            // gameProgressBar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(158, 20);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(178, 23);
-            this.progressBar1.TabIndex = 17;
+            this.gameProgressBar.Location = new System.Drawing.Point(158, 20);
+            this.gameProgressBar.Name = "gameProgressBar";
+            this.gameProgressBar.Size = new System.Drawing.Size(178, 23);
+            this.gameProgressBar.TabIndex = 17;
             // 
             // label4
             // 
@@ -258,18 +259,37 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.label8.TabIndex = 22;
             this.label8.Text = "Book Cart";
             // 
-            // checkOrder
+            // checkOrderListBox
             // 
-            this.checkOrder.AllowDrop = true;
-            this.checkOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.checkOrder.Font = new System.Drawing.Font("Georgia", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkOrder.ForeColor = System.Drawing.Color.MediumPurple;
-            this.checkOrder.FormattingEnabled = true;
-            this.checkOrder.ItemHeight = 20;
-            this.checkOrder.Location = new System.Drawing.Point(904, 67);
-            this.checkOrder.Name = "checkOrder";
-            this.checkOrder.Size = new System.Drawing.Size(199, 224);
-            this.checkOrder.TabIndex = 23;
+            this.checkOrderListBox.AllowDrop = true;
+            this.checkOrderListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.checkOrderListBox.Font = new System.Drawing.Font("Georgia", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkOrderListBox.ForeColor = System.Drawing.Color.MediumPurple;
+            this.checkOrderListBox.FormattingEnabled = true;
+            this.checkOrderListBox.ItemHeight = 20;
+            this.checkOrderListBox.Location = new System.Drawing.Point(904, 67);
+            this.checkOrderListBox.Name = "checkOrderListBox";
+            this.checkOrderListBox.Size = new System.Drawing.Size(199, 224);
+            this.checkOrderListBox.TabIndex = 23;
+            this.checkOrderListBox.Visible = false;
+            // 
+            // tryAgainBtn
+            // 
+            this.tryAgainBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.tryAgainBtn.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
+            this.tryAgainBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.tryAgainBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tryAgainBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tryAgainBtn.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tryAgainBtn.ForeColor = System.Drawing.Color.BlueViolet;
+            this.tryAgainBtn.Location = new System.Drawing.Point(640, 315);
+            this.tryAgainBtn.MinimumSize = new System.Drawing.Size(220, 40);
+            this.tryAgainBtn.Name = "tryAgainBtn";
+            this.tryAgainBtn.Size = new System.Drawing.Size(220, 40);
+            this.tryAgainBtn.TabIndex = 24;
+            this.tryAgainBtn.Text = "Try Again";
+            this.tryAgainBtn.UseVisualStyleBackColor = false;
+            this.tryAgainBtn.Visible = false;
             // 
             // BoringGameOne
             // 
@@ -277,13 +297,14 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1134, 711);
-            this.Controls.Add(this.checkOrder);
+            this.Controls.Add(this.tryAgainBtn);
+            this.Controls.Add(this.checkOrderListBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numCorrectLbl);
             this.Controls.Add(this.numMovesMadeLbl);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.gameProgressBar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -291,8 +312,8 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.Controls.Add(this.startBtn);
             this.Controls.Add(this.moveDownBtn);
             this.Controls.Add(this.moveUpBtn);
-            this.Controls.Add(this.BookShelfSortedListBox);
-            this.Controls.Add(this.BookCartUnsortedListBox);
+            this.Controls.Add(this.bookShelfSortedListBox);
+            this.Controls.Add(this.bookCartUnsortedListBox);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximumSize = new System.Drawing.Size(1150, 750);
@@ -309,22 +330,23 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListBox BookCartUnsortedListBox;
-        private System.Windows.Forms.ListBox BookShelfSortedListBox;
+        private System.Windows.Forms.ListBox bookCartUnsortedListBox;
+        private System.Windows.Forms.ListBox bookShelfSortedListBox;
         private System.Windows.Forms.Button moveUpBtn;
         private System.Windows.Forms.Button moveDownBtn;
-        private System.Windows.Forms.Button startBtn;
         private System.Windows.Forms.Label timeLbl;
         private System.Windows.Forms.Timer boringGameTimer;
         private System.Windows.Forms.Label numCorrectLbl;
         private System.Windows.Forms.Label numMovesMadeLbl;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar gameProgressBar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ListBox checkOrder;
+        private System.Windows.Forms.ListBox checkOrderListBox;
+        public System.Windows.Forms.Button startBtn;
+        public System.Windows.Forms.Button tryAgainBtn;
     }
 }

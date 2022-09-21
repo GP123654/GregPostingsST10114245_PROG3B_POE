@@ -1,14 +1,25 @@
-﻿using System;
+﻿
+
+//Imports
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Package
 namespace GregPostingsST10114245_PROG3B_POE.WorkingGameClasses
 {
+    //Class
     class WGDeweyDecimalNumberGenerator
     {
+        ////////////////////////////////////////////////////////
+        // These are different variables that are being declared
+        // and some are being initialized as well. They are used
+        // for storing different values and some are objects of
+        // classes.
+        ////////////////////////////////////////////////////////
 
         //Variables
 

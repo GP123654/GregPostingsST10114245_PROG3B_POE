@@ -1,4 +1,13 @@
-﻿
+﻿/*
+ * Done By: Greg Postings ST10114245 
+ * Module: PROG 3B
+ * Class: BCA3 G7
+ * Task: POE Task 1
+ * Start Date and Time: 10 September 2022 at 14:30
+ * Finish Date and Time: 21 September 2022 at 16:45
+ * 
+ */
+
 //Imports
 using System;
 using System.Collections.Generic;
@@ -54,8 +63,18 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         /// </summary>
         public void CongradulationsMessage()
         {
-            this.messageTitleLbl.Text = "Congradulations !";
-            this.messageTextLbl.Text = "Well done. You completed the challange. Here is a badge for you.";
+            try
+            {
+                //This sets the heading/ title of the CustomMessageBox2 message box
+                this.messageTitleLbl.Text = "Congradulations !";
+                //This sets the message of the CustomMessageBox2 message box
+                this.messageTextLbl.Text = "Well done. You completed the challange. Here is a badge for you.";
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }            
         }
 
         //----------------------------------------------------------------------------------------------//
@@ -64,11 +83,93 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         /// </summary>
         public void RanOutOfTimeMessage()
         {
-            this.messageTitleLbl.Text = "Oh No !!!";
-            this.messageTextLbl.Text = "You were unable to finish the game in time. Keep trying and play again";
+            try
+            {
+                //This sets the heading/ title of the CustomMessageBox2 message box
+                this.messageTitleLbl.Text = "Oh No !!!";
+                //This sets the message of the CustomMessageBox2 message box
+                this.messageTextLbl.Text = "You were unable to finish the game in time. Keep trying and play again";
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }            
         }
 
         #endregion
+
+
+        ////////////////////////////////////////////////////////
+        // These are all the button click methods used for
+        // opening and closing different forms for navigation
+        ////////////////////////////////////////////////////////
+
+        //Button Click Methods
+
+        #region Button Clicks Methods
+
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Exit Button Click Method - Closes the CustomMessageBox2 and the BoringGameOne form and opens the Form1/ MianMenu form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Creating an object of the BoringGameOne form
+                BoringGameOne boringGameOne = new BoringGameOne();
+                //Hiding the BoringGameOne form - This does not work
+                boringGameOne.Hide();
+
+
+                //Creating an object of the Form1 form
+                Form1 mainMenu = new Form1();
+                //Showing the Form1 form
+                mainMenu.Show();
+
+
+                //Hiding the CustomMessageBox2 message box
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }            
+        }
+
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Play Again Or Try Again Button Click Method - Closes the CustomMessageBox2 form and enables or makes buttons vissible
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PlayTryAgainBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Creating an object of the BoringGameOne form
+                BoringGameOne boringGameOne = new BoringGameOne();
+                //Making the start button enabled - Does not work
+                boringGameOne.startBtn.Enabled = true;
+                //So tried making a play again button - Does not work
+                boringGameOne.tryAgainBtn.Visible = true;
+
+                //Hiding the CustomMessageBox2 message box
+                this.Hide();
+            }
+            catch(Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }          
+        }
+
+        #endregion
+
     }
 }
 //---------------------------------------ooo000 END OF FILE 000ooo--------------------------------------//
