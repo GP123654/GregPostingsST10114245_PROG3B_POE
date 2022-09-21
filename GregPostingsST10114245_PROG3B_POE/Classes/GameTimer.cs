@@ -54,7 +54,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
         }
 
         /// <summary>
-        /// 
+        /// Used for timer
         /// </summary>
         public void TimerIncrease()
         {
@@ -78,7 +78,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
 
 
         /// <summary>
-        /// 
+        /// Used for timer
         /// </summary>
         /// <param name="d"></param>
         /// <param name="s"></param>
@@ -103,7 +103,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
         }
 
         /// <summary>
-        /// 
+        /// Used for countdown timer
         /// </summary>
         /// <param name="d"></param>
         /// <param name="s"></param>

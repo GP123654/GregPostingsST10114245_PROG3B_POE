@@ -60,12 +60,20 @@ namespace GregPostingsST10114245_PROG3B_POE
         /// <param name="e"></param>
         private void ReplaceBooksBtn_Click(object sender, EventArgs e)
         {
-            //Creating an object of the Game1GameMode form
-            Game1GameMode game1GameMode = new Game1GameMode();
-            //Showing the game1GameMode form
-            game1GameMode.Show();
-            //Hiding the Main Menu / Form1 form
-            this.ParentForm.Hide();
+            try
+            {
+                //Creating an object of the Game1GameMode form
+                Game1GameMode game1GameMode = new Game1GameMode();
+                //Showing the game1GameMode form
+                game1GameMode.Show();
+                //Hiding the Main Menu / Form1 form
+                this.ParentForm.Hide();
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }
         }
 
         //----------------------------------------------------------------------------------------------//
@@ -76,12 +84,20 @@ namespace GregPostingsST10114245_PROG3B_POE
         /// <param name="e"></param>
         private void IdentifyAreaBtn_Click(object sender, EventArgs e)
         {
-            //Creating an object of the Game2 form
-            Game2 game2 = new Game2();
-            //Showing the Game2 form
-            game2.Show();
-            //Hiding the Main Menu / Form1 form
-            this.ParentForm.Hide();
+            try
+            {
+                //Creating an object of the Game2 form
+                Game2 game2 = new Game2();
+                //Showing the Game2 form
+                game2.Show();
+                //Hiding the Main Menu / Form1 form
+                this.ParentForm.Hide();
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }
         }
 
         //----------------------------------------------------------------------------------------------//
@@ -92,12 +108,20 @@ namespace GregPostingsST10114245_PROG3B_POE
         /// <param name="e"></param>
         private void FindCallNumBtn_Click(object sender, EventArgs e)
         {
-            //Creating an object of the Game3 form
-            Game3 game3 = new Game3();
-            //Showing the Game3 form
-            game3.Show();
-            //Hiding the Main Menu / Form1 form
-            this.ParentForm.Hide();
+            try
+            {
+                //Creating an object of the Game3 form
+                Game3 game3 = new Game3();
+                //Showing the Game3 form
+                game3.Show();
+                //Hiding the Main Menu / Form1 form
+                this.ParentForm.Hide();
+            }
+            catch(Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }            
         }
 
         #endregion

@@ -112,17 +112,24 @@ namespace GregPostingsST10114245_PROG3B_POE.WorkingGameClasses
         /// <returns></returns>
         private string RandomAuthor(int numOfLetters)
         {
-            //this just resets the letters back to null
-            randomLetters = null;
-
-            //For loop to create the number of letters specified
-            for (int i = 0; i < numOfLetters; i++)
+            try
             {
-                randomLetters += letters[random.Next(0, letters.Length)];
-            }
+                //this just resets the letters back to null
+                this.randomLetters = null;
 
+                //For loop to create the number of letters specified
+                for (int i = 0; i < numOfLetters; i++)
+                {
+                    this.randomLetters += this.letters[this.random.Next(0, this.letters.Length)];
+                }               
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Please select a valid item");
+            }
             //Returning the letters in uppercase format
-            return randomLetters.ToUpper();
+            return this.randomLetters.ToUpper();
         }
 
         //----------------------------------------------------------------------------------------------//
@@ -133,17 +140,24 @@ namespace GregPostingsST10114245_PROG3B_POE.WorkingGameClasses
         /// <returns></returns>
         private string RandomTopicNum(int numOfNumbers)
         {
-            //this just resets the letters back to null
-            randomTopicNumbers = null;
-
-            //For loop to create the amount of numbers specified
-            for (int i = 0; i < numOfNumbers; i++)
+            try
             {
-                randomTopicNumbers += numbers[random.Next(0, numbers.Length)];
-            }
+                //this just resets the letters back to null
+                this.randomTopicNumbers = null;
 
+                //For loop to create the amount of numbers specified
+                for (int i = 0; i < numOfNumbers; i++)
+                {
+                    this.randomTopicNumbers += this.numbers[this.random.Next(0, this.numbers.Length)];
+                }            
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Please select a valid item");
+            }
             //Returning the numbers
-            return randomTopicNumbers;
+            return this.randomTopicNumbers;
         }
 
         #endregion
@@ -166,12 +180,20 @@ namespace GregPostingsST10114245_PROG3B_POE.WorkingGameClasses
         /// <param name="list"></param>
         public void DisplayList(List<string> list, ListBox listbox)
         {
-            //For loop that loops for the length/count of the specified List<string>
-            for (int i = 0; i < list.Count; i++)
+            try
             {
-                //Adds the specified List<string> values to the BookCartUnsortedListBox listbox
-                listbox.Items.Add(list[i]);
+                //For loop that loops for the length/count of the specified List<string>
+                for (int i = 0; i < list.Count; i++)
+                {
+                    //Adds the specified List<string> values to the BookCartUnsortedListBox listbox
+                    listbox.Items.Add(list[i]);
+                }
             }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Please select a valid item");
+            }            
         }
 
         //----------------------------------------------------------------------------------------------//
@@ -181,15 +203,23 @@ namespace GregPostingsST10114245_PROG3B_POE.WorkingGameClasses
         /// </summary>
         public void GenerateAndDisplyRandomNumbers(ListBox listbox)
         {
-            //For loop that adds 10 random dewey decimal numbers to the deweyNums List
-            for (int i = 0; i < 10; i++)
+            try
             {
-                //Adding random call numbers to the deweyNums List
-                deweyNums.Add(RandomDeweyCallNumber());
-            }
+                //For loop that adds 10 random dewey decimal numbers to the deweyNums List
+                for (int i = 0; i < 10; i++)
+                {
+                    //Adding random call numbers to the deweyNums List
+                    this.deweyNums.Add(RandomDeweyCallNumber());
+                }
 
-            /** Calling the DisplayList Method */
-            DisplayList(deweyNums, listbox);
+                /** Calling the DisplayList Method */
+                DisplayList(this.deweyNums, listbox);
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Please select a valid item");
+            }           
         }
 
         #endregion

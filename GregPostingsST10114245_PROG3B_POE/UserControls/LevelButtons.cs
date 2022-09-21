@@ -102,12 +102,20 @@ namespace GregPostingsST10114245_PROG3B_POE.UserControls
         /// <param name="e"></param>
         private void BackBtn_Click(object sender, EventArgs e)
         {
-            //Creating an object of the Game1GameMode form
-            Game1GameMode game1GameMode = new Game1GameMode();
-            //Showing the game1GameMode form
-            game1GameMode.Show();
-            //Hiding the Levels form
-            this.ParentForm.Hide();
+            try
+            {
+                //Creating an object of the Game1GameMode form
+                Game1GameMode game1GameMode = new Game1GameMode();
+                //Showing the game1GameMode form
+                game1GameMode.Show();
+                //Hiding the Levels form
+                this.ParentForm.Hide();
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }
         }
 
         #endregion

@@ -114,15 +114,23 @@ namespace GregPostingsST10114245_PROG3B_POE.UserControls
 
             #endregion
 
-            //Creating 10 random numbers
-            for (int i = 0; i < 10; i++)
-            {
-                //Adding random number to the deweyNums List
-                d.deweyNums.Add(d.RandomDNumber());
-            }
-            //Displaying the numbers in the lables
-            DisplayList(label1, d.deweyNums);
 
+            try
+            {
+                //Creating 10 random numbers
+                for (int i = 0; i < 10; i++)
+                {
+                    //Adding random number to the deweyNums List
+                    d.deweyNums.Add(d.RandomDNumber());
+                }
+                //Displaying the numbers in the lables
+                DisplayList(label1, d.deweyNums);
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }
         }
 
         #endregion
@@ -144,10 +152,18 @@ namespace GregPostingsST10114245_PROG3B_POE.UserControls
         /// <param name="list"></param>
         public void DisplayList(Label a, List<string> list)
         {
-            for (int i = 0; i < list.Count; i++)
-            { 
-                //Sets the book label to a dewey decimal number from the list
-                a.Text = list[i];
+            try
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    //Sets the book label to a dewey decimal number from the list
+                    a.Text = list[i];
+                }
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
             }
         }
 
@@ -171,22 +187,30 @@ namespace GregPostingsST10114245_PROG3B_POE.UserControls
         /// <param name="e"></param>
         private void BookDrawing_Paint(object sender, PaintEventArgs e)
         {
-            //Brush brush = new SolidBrush(Color.Red);
+            try
+            {
+                //Brush brush = new SolidBrush(Color.Red);
 
-            //White color for the label
-            Brush brush2 = new SolidBrush(Color.White);
+                //White color for the label
+                Brush brush2 = new SolidBrush(Color.White);
 
-            //Random color for each book
-            var color = Color.FromArgb((byte)this.RandomNumber.Next(), (byte)this.RandomNumber.Next(), (byte)this.RandomNumber.Next());
-            //Setting the color of the book to a random color
-            this.BookColor = new SolidBrush(color);
+                //Random color for each book
+                var color = Color.FromArgb((byte)this.RandomNumber.Next(), (byte)this.RandomNumber.Next(), (byte)this.RandomNumber.Next());
+                //Setting the color of the book to a random color
+                this.BookColor = new SolidBrush(color);
 
 
-            Graphics g = e.Graphics;
-            //Main book
-            g.FillRectangle(this.BookColor, 0, 0, 200, 800);
-            //Book label
-            g.FillRectangle(brush2, 5, 180, 80, 50);
+                Graphics g = e.Graphics;
+                //Main book
+                g.FillRectangle(this.BookColor, 0, 0, 200, 800);
+                //Book label
+                g.FillRectangle(brush2, 5, 180, 80, 50);
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }            
         }
 
         #endregion

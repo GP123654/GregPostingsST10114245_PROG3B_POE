@@ -21,27 +21,14 @@ namespace GregPostingsST10114245_PROG3B_POE.WorkingGameClasses
     class WGSortingAlgorithims
     {
 
+        ////////////////////////////////////////////////////////
+        // This is one example of a sorting algorithim that is
+        // called the bubble sort. But it is not the best one.
+        ////////////////////////////////////////////////////////
+
         //Bubble Sort
 
         #region Bubble Sort
-
-        //public void BubbleSort(string[] unsortedList)
-        //{
-        //    double temp;
-        //    for (int i = 0; i < unsortedList.Length - 1; i++)
-        //    {
-        //        for (int j = 0; j < unsortedList.Length - (1 + i); j++)
-        //        {
-        //            if (unsortedList[j] > unsortedList[j + 1])
-        //            {
-        //                temp = unsortedList[j + 1];
-        //                unsortedList[j + 1] = unsortedList[j];
-        //                unsortedList[j] = temp;
-        //            }
-        //        }
-        //    }
-        //}
-
 
         //----------------------------------------------------------------------------------------------//
         /// <summary>
@@ -80,6 +67,12 @@ namespace GregPostingsST10114245_PROG3B_POE.WorkingGameClasses
 
         #endregion
 
+
+        ////////////////////////////////////////////////////////
+        // This is another example of a sorting algorithim that
+        // is called the quick sort. It is a more efficient
+        // sorting algorithim.
+        ////////////////////////////////////////////////////////
 
         //Quick Sort
 
@@ -145,6 +138,11 @@ namespace GregPostingsST10114245_PROG3B_POE.WorkingGameClasses
         #endregion
 
 
+        ////////////////////////////////////////////////////////
+        // These are just some basic sorting techniques using
+        // the Sorting method and LINQ.
+        ////////////////////////////////////////////////////////
+
         //Easy Sorts
 
         #region Easy Sorts
@@ -162,14 +160,22 @@ namespace GregPostingsST10114245_PROG3B_POE.WorkingGameClasses
         /// <param name="lb"></param>
         public void EasySortWithLINQ(ListBox lb)
         {
-            //Creating a variable to store the new sorted List using LINQ
-            var sortedList = wGDeweyDecimalNumberGenerator.deweyNums.OrderBy(x => x).ToList();
-
-            foreach (var num in sortedList)
+            try
             {
-                //Adds the numbers to a specified listBox
-                lb.Items.Add(num);
+                //Creating a variable to store the new sorted List using LINQ
+                var sortedList = this.wGDeweyDecimalNumberGenerator.deweyNums.OrderBy(x => x).ToList();
+
+                foreach (var num in sortedList)
+                {
+                    //Adds the numbers to a specified listBox
+                    lb.Items.Add(num);
+                }
             }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Please select a valid item");
+            }           
         }
 
         //----------------------------------------------------------------------------------------------//
@@ -179,16 +185,24 @@ namespace GregPostingsST10114245_PROG3B_POE.WorkingGameClasses
         /// <param name="lb"></param>
         public void EasySort(ListBox lb)
         {
-            //Clears the items from a specified listBox
-            lb.Items.Clear();
-            //Sorting the deweyNums List
-            wGDeweyDecimalNumberGenerator.deweyNums.Sort();
-
-            foreach (var num in wGDeweyDecimalNumberGenerator.deweyNums)
+            try
             {
-                //Adds the numbers to a specified listBox
-                lb.Items.Add(num);
+                //Clears the items from a specified listBox
+                lb.Items.Clear();
+                //Sorting the deweyNums List
+                this.wGDeweyDecimalNumberGenerator.deweyNums.Sort();
+
+                foreach (var num in this.wGDeweyDecimalNumberGenerator.deweyNums)
+                {
+                    //Adds the numbers to a specified listBox
+                    lb.Items.Add(num);
+                }
             }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Please select a valid item");
+            }           
         }
 
         #endregion

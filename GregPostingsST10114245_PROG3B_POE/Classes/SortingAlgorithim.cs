@@ -21,6 +21,13 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
     class SortingAlgorithim
     {
 
+        ////////////////////////////////////////////////////////
+        // This is one example of a sorting algorithim that is
+        // called the bubble sort. But it is not the best one.
+        ////////////////////////////////////////////////////////
+
+        //Bubble Sort
+
         #region Bubble Sort
 
         //public void BubbleSort(string[] unsortedList)
@@ -40,7 +47,12 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
         //    }
         //}
 
-
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Bubble Sorting Method
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="array"></param>
         public static void BubbleSort<T>(T[] array) where T : IComparable
         {
             for (int i = 0; i < array.Length; i++)
@@ -54,8 +66,15 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
                 }
             }
         }
-        
 
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Swapping Method
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="array"></param>
+        /// <param name="first"></param>
+        /// <param name="second"></param>
         private static void Swap<T>(T[] array, int first, int second)
         {
             T temp = array[first];
@@ -66,8 +85,20 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
         #endregion
 
 
+        ////////////////////////////////////////////////////////
+        // These are just some basic sorting techniques using
+        // the Sorting method and LINQ.
+        ////////////////////////////////////////////////////////
+
+        //Easy Sorts
+
         #region Easy Sorts
 
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Using LINQ to sort a specified listBox
+        /// </summary>
+        /// <param name="lb"></param>
         public void EasySortWithLINQ(ListBox lb)
         {
             DeweyDecimalNumberGenerator d = new DeweyDecimalNumberGenerator();
@@ -81,6 +112,11 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
             }
         }
 
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Using the Sort method to sort a specified listBox
+        /// </summary>
+        /// <param name="lb"></param>
         public void EasySort(ListBox lb)
         {
             DeweyDecimalNumberGenerator d = new DeweyDecimalNumberGenerator();

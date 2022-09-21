@@ -73,6 +73,12 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
         #endregion
 
 
+        ////////////////////////////////////////////////////////
+        // These methods are used for generating the random
+        // topic numbers and authors letters. It then puts them
+        // together to make a random dewey decimal call number.
+        ////////////////////////////////////////////////////////
+
         //Random Number Generator Methods
 
         #region Random Number Generator
@@ -104,12 +110,12 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
         /// <param name="numOfLetters"></param>
         private string RandomAuthor(int numOfLetters)
         {
-            randomLetters = null;
+            this.randomLetters = null;
             for (int i = 0; i < numOfLetters; i++)
             {
-                randomLetters += letters[random.Next(0, letters.Length)];
+                this.randomLetters += this.letters[this.random.Next(0, this.letters.Length)];
             }
-            return randomLetters.ToUpper();
+            return this.randomLetters.ToUpper();
         }
 
         //----------------------------------------------------------------------------------------------//
@@ -120,17 +126,20 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
         /// <returns></returns>
         private string Random3DigetNum(int numOfNumbers)
         {
-            random3DigetNumbers = null;
+            this.random3DigetNumbers = null;
             for (int i = 0; i < numOfNumbers; i++)
             {
-                random3DigetNumbers += numbers[random.Next(0, numbers.Length)];
+                this.random3DigetNumbers += this.numbers[this.random.Next(0, this.numbers.Length)];
             }
-            return random3DigetNumbers;
+            return this.random3DigetNumbers;
         }
 
         #endregion
 
 
+        ////////////////////////////////////////////////////////
+        // These are just some tests
+        ////////////////////////////////////////////////////////
 
         //TESTS
 

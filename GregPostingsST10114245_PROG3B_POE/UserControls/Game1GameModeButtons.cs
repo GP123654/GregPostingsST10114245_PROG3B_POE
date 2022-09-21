@@ -61,24 +61,32 @@ namespace GregPostingsST10114245_PROG3B_POE.UserControls
         /// <param name="e"></param>
         private void HighScoreBtn_Click(object sender, EventArgs e)
         {
-            //Creating an object of the Game1 form
-            Game1 game1 = new Game1();
-            //Showing the Game1 form
-            game1.Show();
-            //Hiding the Game Mode Menu / Game1GameMode form
-            this.ParentForm.Hide();
+            try
+            {
+                //Creating an object of the Game1 form
+                Game1 game1 = new Game1();
+                //Showing the Game1 form
+                game1.Show();
+                //Hiding the Game Mode Menu / Game1GameMode form
+                this.ParentForm.Hide();
 
 
-            //Trying to set the game mode using a boolean could also use an enum
-            GameTimer gt = new GameTimer();
-            //Setting the game mode to high score
-            gt.GameModeHS = true;
+                //Trying to set the game mode using a boolean could also use an enum
+                GameTimer gt = new GameTimer();
+                //Setting the game mode to high score
+                gt.GameModeHS = true;
 
 
-            //Creating an object of the CustomMessageBox form
-            CustomMessageBox cmb = new CustomMessageBox();
-            //Shows the instructions in the custom message box
-            cmb.Show();
+                //Creating an object of the CustomMessageBox form
+                CustomMessageBox cmb = new CustomMessageBox();
+                //Shows the instructions in the custom message box
+                cmb.Show();
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }
         }
 
         //----------------------------------------------------------------------------------------------//
@@ -89,12 +97,20 @@ namespace GregPostingsST10114245_PROG3B_POE.UserControls
         /// <param name="e"></param>
         private void TimeTraialBtn_Click(object sender, EventArgs e)
         {
-            //Creating an object of the Levels form
-            Levels levels = new Levels();
-            //Showing the Levels form
-            levels.Show();
-            //Hiding the Game Mode Menu / Game1GameMode form
-            this.ParentForm.Hide();
+            try
+            {
+                //Creating an object of the Levels form
+                Levels levels = new Levels();
+                //Showing the Levels form
+                levels.Show();
+                //Hiding the Game Mode Menu / Game1GameMode form
+                this.ParentForm.Hide();
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }
         }
 
         //----------------------------------------------------------------------------------------------//
@@ -105,18 +121,26 @@ namespace GregPostingsST10114245_PROG3B_POE.UserControls
         /// <param name="e"></param>
         private void WorkingGameBtn_Click(object sender, EventArgs e)
         {
-            //Creating an object of the BoringGameOne form
-            BoringGameOne boringGameOne = new BoringGameOne();
-            //Showing the BoringGameOne form
-            boringGameOne.Show();
-            //Hiding the Game Mode Menu / Game1GameMode form
-            this.ParentForm.Hide();
+            try
+            {
+                //Creating an object of the BoringGameOne form
+                BoringGameOne boringGameOne = new BoringGameOne();
+                //Showing the BoringGameOne form
+                boringGameOne.Show();
+                //Hiding the Game Mode Menu / Game1GameMode form
+                this.ParentForm.Hide();
 
 
-            //Creating an object of the CustomMessageBox form
-            CustomMessageBox cmb = new CustomMessageBox();
-            //Shows the instructions in the custom message box
-            cmb.Show();
+                //Creating an object of the CustomMessageBox form
+                CustomMessageBox cmb = new CustomMessageBox();
+                //Shows the instructions in the custom message box
+                cmb.Show();
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }
         }
 
         //----------------------------------------------------------------------------------------------//
@@ -127,12 +151,20 @@ namespace GregPostingsST10114245_PROG3B_POE.UserControls
         /// <param name="e"></param>
         private void BackBtn_Click(object sender, EventArgs e)
         {
-            //Creating an object of the Form1 form
-            Form1 mainMenu = new Form1();
-            //Showing the Form1 form
-            mainMenu.Show();
-            //Hiding the Game Mode Menu / Game1GameMode form
-            this.ParentForm.Hide();
+            try
+            {
+                //Creating an object of the Form1 form
+                Form1 mainMenu = new Form1();
+                //Showing the Form1 form
+                mainMenu.Show();
+                //Hiding the Game Mode Menu / Game1GameMode form
+                this.ParentForm.Hide();
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }
         }
 
         #endregion

@@ -368,7 +368,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
         //----------------------------------------------------------------------------------------------//
         /// <summary>
-        /// Try Again Button Click Method - 
+        /// Try Again Button Click Method - Lets you play the game again
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -401,6 +401,19 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         #endregion
 
 
+        ////////////////////////////////////////////////////////
+        // These are for resetting all the gamification features
+        // for when the user wants to play again.
+        ////////////////////////////////////////////////////////
+
+        //Reset Gamification Features Method
+
+        #region Reset Gamification Features
+
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// This resets all the gamification features
+        /// </summary>
         public void Reset()
         {
             try
@@ -438,6 +451,8 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
                 MessageBox.Show("Error is: " + ex);
             }
         }
+
+        #endregion
 
 
         ////////////////////////////////////////////////////////
