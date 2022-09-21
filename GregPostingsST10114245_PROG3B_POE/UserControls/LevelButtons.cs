@@ -1,16 +1,17 @@
-﻿
+﻿/*
+ * Done By: Greg Postings ST10114245 
+ * Module: PROG 3B
+ * Class: BCA3 G7
+ * Task: POE Task 1
+ * Start Date and Time: 10 September 2022 at 14:30
+ * Finish Date and Time: 21 September 2022 at 16:45
+ * 
+ */
+
 
 //Imports
-using GregPostingsST10114245_PROG3B_POE.Classes;
 using GregPostingsST10114245_PROG3B_POE.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 //Package
@@ -59,7 +60,8 @@ namespace GregPostingsST10114245_PROG3B_POE.UserControls
         /// <param name="e"></param>
         private void Level1Btn_Click(object sender, EventArgs e)
         {
-            //Would be used to change to amount of time available
+            //Would be used to change to amount of time available using the
+            //TimerDecrease Method from the GameTimer class
             //And maybe also the number of letters and numbers available
             //To make it harder
         }
@@ -72,7 +74,8 @@ namespace GregPostingsST10114245_PROG3B_POE.UserControls
         /// <param name="e"></param>
         private void Level2Btn_Click(object sender, EventArgs e)
         {
-            //Would be used to change to amount of time available
+            //Would be used to change to amount of time available using the
+            //TimerDecrease Method from the GameTimer class
             //And maybe also the number of letters and numbers available
             //To make it harder
         }
@@ -85,7 +88,8 @@ namespace GregPostingsST10114245_PROG3B_POE.UserControls
         /// <param name="e"></param>
         private void Level3Btn_Click(object sender, EventArgs e)
         {
-            //Would be used to change to amount of time available
+            //Would be used to change to amount of time available using the
+            //TimerDecrease Method from the GameTimer class
             //And maybe also the number of letters and numbers available
             //To make it harder
         }

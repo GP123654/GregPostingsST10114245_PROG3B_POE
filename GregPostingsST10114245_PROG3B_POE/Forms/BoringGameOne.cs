@@ -511,6 +511,9 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         #region Miscellaneous Gamification Features
 
         //----------------------------------------------------------------------------------------------//
+        //Miscellaneous Methods
+
+        //----------------------------------------------------------------------------------------------//
         /// <summary>
         /// This checks to see if the user has finished the game successfully
         /// </summary>
@@ -620,6 +623,9 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         //Sorting The DeweyNums List Method
 
         #region Sorting The DeweyNums List
+
+        //----------------------------------------------------------------------------------------------//
+        //Sorting Methods
 
         //----------------------------------------------------------------------------------------------//
         /// <summary>

@@ -1,15 +1,19 @@
-﻿
+﻿/*
+ * Done By: Greg Postings ST10114245 
+ * Module: PROG 3B
+ * Class: BCA3 G7
+ * Task: POE Task 1
+ * Start Date and Time: 10 September 2022 at 14:30
+ * Finish Date and Time: 21 September 2022 at 16:45
+ * 
+ */
+
 
 //Imports
 using GregPostingsST10114245_PROG3B_POE.Classes;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 //Package
@@ -18,9 +22,16 @@ namespace GregPostingsST10114245_PROG3B_POE.UserControls
     //Class
     public partial class BookDrawing : UserControl
     {
+
+        ////////////////////////////////////////////////////////
+        // These are different variables that are being declared.
+        // They are used for storing different values and some
+        // are objects of classes.
+        ////////////////////////////////////////////////////////
+
         //Variables
 
-        #region Most Of The Variables
+        #region Variables
 
         //----------------------------------------------------------------------------------------------//
         /// <summary>
@@ -103,11 +114,13 @@ namespace GregPostingsST10114245_PROG3B_POE.UserControls
 
             #endregion
 
-
+            //Creating 10 random numbers
             for (int i = 0; i < 10; i++)
             {
+                //Adding random number to the deweyNums List
                 d.deweyNums.Add(d.RandomDNumber());
             }
+            //Displaying the numbers in the lables
             DisplayList(label1, d.deweyNums);
 
         }

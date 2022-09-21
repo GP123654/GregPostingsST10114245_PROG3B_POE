@@ -33,9 +33,6 @@ namespace GregPostingsST10114245_PROG3B_POE.WorkingGameClasses
         #region Variables
 
         //----------------------------------------------------------------------------------------------//
-        //Variables
-
-        //----------------------------------------------------------------------------------------------//
         /// <summary>
         /// Creating an object of the Random class
         /// </summary>
@@ -74,12 +71,15 @@ namespace GregPostingsST10114245_PROG3B_POE.WorkingGameClasses
         #endregion
 
 
+        ////////////////////////////////////////////////////////
+        // These methods are used for generating the random
+        // topic numbers and authors letters. It then puts them
+        // together to make a random dewey decimal call number.
+        ////////////////////////////////////////////////////////
+
         //Random Number Generator Methods
 
         #region Random Number Generator
-
-        //----------------------------------------------------------------------------------------------//
-        //Random Number Generation Methods
 
         //----------------------------------------------------------------------------------------------//
         /// <summary>
@@ -149,12 +149,15 @@ namespace GregPostingsST10114245_PROG3B_POE.WorkingGameClasses
         #endregion
 
 
+        ////////////////////////////////////////////////////////
+        // These methods add the random dewey decimal numbers
+        // to a List. Then those numbers get displayed into
+        // a listBox.
+        ////////////////////////////////////////////////////////
+
         //Generate And Display Random Call Number Methods
 
         #region Generating And Displying Random Numbers
-
-        //----------------------------------------------------------------------------------------------//
-        //Generating And Displying Random Numbers Methods
 
         //----------------------------------------------------------------------------------------------//
         /// <summary>
@@ -182,7 +185,6 @@ namespace GregPostingsST10114245_PROG3B_POE.WorkingGameClasses
             for (int i = 0; i < 10; i++)
             {
                 //Adding random call numbers to the deweyNums List
-                //deweyNums.Add(RandomDeweyCallNumber());
                 deweyNums.Add(RandomDeweyCallNumber());
             }
 
@@ -191,5 +193,6 @@ namespace GregPostingsST10114245_PROG3B_POE.WorkingGameClasses
         }
 
         #endregion
+
     }
 }

@@ -1,12 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/*
+ * Done By: Greg Postings ST10114245 
+ * Module: PROG 3B
+ * Class: BCA3 G7
+ * Task: POE Task 1
+ * Start Date and Time: 10 September 2022 at 14:30
+ * Finish Date and Time: 21 September 2022 at 16:45
+ * 
+ */
+
+
+//Imports
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Package
 namespace GregPostingsST10114245_PROG3B_POE.WorkingGameClasses
 {
+    //Class
     class WGSortingAlgorithims
     {
 
