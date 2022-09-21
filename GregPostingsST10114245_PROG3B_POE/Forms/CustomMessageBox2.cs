@@ -63,6 +63,8 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
                 this.messageTitleLbl.Text = "Congradulations !";
                 //This sets the message of the CustomMessageBox2 message box
                 this.messageTextLbl.Text = "Well done. You completed the challange. Here is a badge for you.";
+                //This sets the button text of the CustomMessageBox2 message box
+                this.UnderstandBtn.Text = "Thank you";
             }
             catch (Exception ex)
             {
@@ -83,6 +85,8 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
                 this.messageTitleLbl.Text = "Oh No !!!";
                 //This sets the message of the CustomMessageBox2 message box
                 this.messageTextLbl.Text = "You were unable to finish the game in time. Keep trying and play again";
+                //This sets the button text of the CustomMessageBox2 message box
+                this.UnderstandBtn.Text = "I understand";
             }
             catch (Exception ex)
             {
@@ -103,6 +107,30 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
         #region Button Clicks Methods
 
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Understand Button Click Method - Closes the CustomMessageBox2 form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void UnderstandBtn_Click(object sender, EventArgs e)
+        {
+            //Hiding the CustomMessageBox2 form
+            this.Hide();
+        }
+
+        #endregion
+
+
+        ////////////////////////////////////////////////////////
+        // These are just tests
+        ////////////////////////////////////////////////////////
+
+        //TESTS
+
+        #region TESTS
+
+        /*
         //----------------------------------------------------------------------------------------------//
         /// <summary>
         /// Exit Button Click Method - Closes the CustomMessageBox2 and the BoringGameOne form and opens the Form1/ MianMenu form
@@ -132,7 +160,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             {
                 //Error message
                 MessageBox.Show("Error is: " + ex);
-            }            
+            }
         }
 
         //----------------------------------------------------------------------------------------------//
@@ -155,12 +183,14 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
                 //Hiding the CustomMessageBox2 message box
                 this.Hide();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 //Error message
                 MessageBox.Show("Error is: " + ex);
-            }          
+            }
         }
+
+        */
 
         #endregion
 

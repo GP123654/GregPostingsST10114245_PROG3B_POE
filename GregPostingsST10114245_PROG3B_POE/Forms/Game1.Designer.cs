@@ -86,7 +86,7 @@ namespace GregPostingsST10114245_PROG3B_POE
             // timer1
             // 
             this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // flowLayoutPanel2
             // 

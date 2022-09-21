@@ -39,19 +39,32 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             InitializeComponent();
         }
 
+
         #endregion
 
-        private void button1_Click(object sender, EventArgs e)
+
+        ////////////////////////////////////////////////////////
+        // These are all the button click methods used for
+        // opening and closing different forms for navigation
+        ////////////////////////////////////////////////////////
+
+        //Button Click Methods
+
+        #region Button Clicks Methods
+
+        /// <summary>
+        /// Ready Button Click Method - closes the CustomMessageBox form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ReadyButton_Click(object sender, EventArgs e)
         {
-            /*
-            label2.Text = "Hello, Welcome to: where that book go?\n\n" +
-                "In this game you will have to sort the books according to their call numbers.\n" +
-                "You will have to sort them by their numbers first in ascending order and then by their letters";
-            */
-
-
+            //Hide the CustomMessageBox form
             this.Hide();
         }
+
+        #endregion
+
     }
 }
 //---------------------------------------ooo000 END OF FILE 000ooo--------------------------------------//

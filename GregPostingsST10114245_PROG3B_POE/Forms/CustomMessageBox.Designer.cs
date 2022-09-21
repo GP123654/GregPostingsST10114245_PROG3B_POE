@@ -31,7 +31,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomMessageBox));
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.readyButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,23 +50,23 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.label1.TabIndex = 0;
             this.label1.Text = "Where that book go?";
             // 
-            // button1
+            // readyButton
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Georgia", 12F);
-            this.button1.ForeColor = System.Drawing.Color.BlueViolet;
-            this.button1.Location = new System.Drawing.Point(544, 469);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 30);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "I\'m Ready";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.readyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.readyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.readyButton.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
+            this.readyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.readyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.readyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.readyButton.Font = new System.Drawing.Font("Georgia", 12F);
+            this.readyButton.ForeColor = System.Drawing.Color.BlueViolet;
+            this.readyButton.Location = new System.Drawing.Point(544, 469);
+            this.readyButton.Name = "readyButton";
+            this.readyButton.Size = new System.Drawing.Size(120, 30);
+            this.readyButton.TabIndex = 3;
+            this.readyButton.Text = "I\'m Ready";
+            this.readyButton.UseVisualStyleBackColor = false;
+            this.readyButton.Click += new System.EventHandler(this.ReadyButton_Click);
             // 
             // panel2
             // 
@@ -76,7 +76,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.readyButton);
             this.panel2.Location = new System.Drawing.Point(5, 25);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(690, 510);
@@ -126,7 +126,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button readyButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;

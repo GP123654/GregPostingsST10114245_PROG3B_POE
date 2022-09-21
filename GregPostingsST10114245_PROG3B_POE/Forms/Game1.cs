@@ -23,8 +23,19 @@ namespace GregPostingsST10114245_PROG3B_POE
     public partial class Game1 : Form
     {
 
+        /// <summary>
+        /// 
+        /// </summary>
         private DeweyDecimalNumberGenerator d = new DeweyDecimalNumberGenerator();
+
+        /// <summary>
+        /// 
+        /// </summary>
         private BookDrawing b = new BookDrawing();
+
+        /// <summary>
+        /// 
+        /// </summary>
         BookDrawing[] bookDrawings = new BookDrawing[10];
 
 
@@ -80,6 +91,12 @@ namespace GregPostingsST10114245_PROG3B_POE
 
         #endregion
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             //Form1 form1 = new Form1();
@@ -93,12 +110,19 @@ namespace GregPostingsST10114245_PROG3B_POE
             timer1.Start();
         }
 
+        /// <summary>
+        /// Goes back to the main menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Game1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
+            //Creating an object of the Form1 form
+            Form1 mainMenu = new Form1();
+            //Showing the Form1 form
+            mainMenu.Show();
+            //Hiding the Game Mode Menu / Game1GameMode form
             this.Hide();
-            
         }
 
 
@@ -109,7 +133,12 @@ namespace GregPostingsST10114245_PROG3B_POE
         int m = 0;
         int h = 0;
 
-        private void timer1_Tick(object sender, EventArgs e)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             s++;
             
@@ -129,16 +158,31 @@ namespace GregPostingsST10114245_PROG3B_POE
             
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void flowLayoutPanel1_MouseDown(object sender, MouseEventArgs e)
         {
             flowLayoutPanel1.DoDragDrop(flowLayoutPanel1.Parent.Controls, DragDropEffects.Move);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void flowLayoutPanel2_DragEnter(object sender, DragEventArgs e)
         {
             e.Effect = e.AllowedEffect;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void flowLayoutPanel2_DragDrop(object sender, DragEventArgs e)
         {
             //flowLayoutPanel2.Parent = e.Data.GetData(flowLayoutPanel2.Controls.GetChildIndex());

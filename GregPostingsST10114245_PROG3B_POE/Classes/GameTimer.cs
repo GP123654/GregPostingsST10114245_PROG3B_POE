@@ -20,17 +20,42 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
     //Class
     class GameTimer
     {
+        /// <summary>
+        /// 
+        /// </summary>       
         public static int H { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>       
         public static int M { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static int S { get; set; }
 
         //public int H { get; set; }
         //public int M { get; set; }
         //public int S { get; set; }
 
+        /// <summary>
+        /// To decide which game mode it is
+        /// </summary>
         public bool GameModeHS { get; set; }
 
+        /// <summary>
+        /// Or this
+        /// </summary>
+        private enum GameMode
+        {
+            HighScore,
+            TimeTrail
+        }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void TimerIncrease()
         {
             Game1GameBar game1GameBar = new Game1GameBar();
@@ -52,7 +77,13 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
         }
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="d"></param>
+        /// <param name="s"></param>
+        /// <param name="m"></param>
+        /// <param name="h"></param>
         public void TimerIncrease2(Label d, int s, int m, int h)
         {
             s++;
@@ -71,6 +102,13 @@ namespace GregPostingsST10114245_PROG3B_POE.Classes
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="d"></param>
+        /// <param name="s"></param>
+        /// <param name="m"></param>
+        /// <param name="h"></param>
         public void TimerDecrease(Label d, int s, int m, int h)
         {
             //s--;

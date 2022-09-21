@@ -30,13 +30,12 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ExitBtn = new System.Windows.Forms.Button();
-            this.messageTextLbl = new System.Windows.Forms.Label();
-            this.PlayTryAgainBtn = new System.Windows.Forms.Button();
-            this.messageTitleLbl = new System.Windows.Forms.Label();
             this.achievementImage3 = new System.Windows.Forms.PictureBox();
             this.achievementImage2 = new System.Windows.Forms.PictureBox();
             this.achievementImage1 = new System.Windows.Forms.PictureBox();
+            this.messageTextLbl = new System.Windows.Forms.Label();
+            this.UnderstandBtn = new System.Windows.Forms.Button();
+            this.messageTitleLbl = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.achievementImage3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.achievementImage2)).BeginInit();
@@ -49,74 +48,15 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.panel2.Controls.Add(this.ExitBtn);
             this.panel2.Controls.Add(this.achievementImage3);
             this.panel2.Controls.Add(this.achievementImage2);
             this.panel2.Controls.Add(this.achievementImage1);
             this.panel2.Controls.Add(this.messageTextLbl);
-            this.panel2.Controls.Add(this.PlayTryAgainBtn);
+            this.panel2.Controls.Add(this.UnderstandBtn);
             this.panel2.Location = new System.Drawing.Point(5, 24);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(540, 290);
             this.panel2.TabIndex = 6;
-            // 
-            // ExitBtn
-            // 
-            this.ExitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.ExitBtn.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
-            this.ExitBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ExitBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitBtn.Font = new System.Drawing.Font("Georgia", 12F);
-            this.ExitBtn.ForeColor = System.Drawing.Color.BlueViolet;
-            this.ExitBtn.Location = new System.Drawing.Point(255, 249);
-            this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(120, 30);
-            this.ExitBtn.TabIndex = 8;
-            this.ExitBtn.Text = "Exit";
-            this.ExitBtn.UseVisualStyleBackColor = false;
-            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
-            // 
-            // messageTextLbl
-            // 
-            this.messageTextLbl.AutoSize = true;
-            this.messageTextLbl.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.messageTextLbl.ForeColor = System.Drawing.Color.MediumPurple;
-            this.messageTextLbl.Location = new System.Drawing.Point(56, 39);
-            this.messageTextLbl.Name = "messageTextLbl";
-            this.messageTextLbl.Size = new System.Drawing.Size(33, 15);
-            this.messageTextLbl.TabIndex = 4;
-            this.messageTextLbl.Text = "Info";
-            // 
-            // PlayTryAgainBtn
-            // 
-            this.PlayTryAgainBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.PlayTryAgainBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.PlayTryAgainBtn.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
-            this.PlayTryAgainBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.PlayTryAgainBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.PlayTryAgainBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PlayTryAgainBtn.Font = new System.Drawing.Font("Georgia", 12F);
-            this.PlayTryAgainBtn.ForeColor = System.Drawing.Color.BlueViolet;
-            this.PlayTryAgainBtn.Location = new System.Drawing.Point(394, 249);
-            this.PlayTryAgainBtn.Name = "PlayTryAgainBtn";
-            this.PlayTryAgainBtn.Size = new System.Drawing.Size(120, 30);
-            this.PlayTryAgainBtn.TabIndex = 3;
-            this.PlayTryAgainBtn.Text = "Play Again";
-            this.PlayTryAgainBtn.UseVisualStyleBackColor = false;
-            this.PlayTryAgainBtn.Click += new System.EventHandler(this.PlayTryAgainBtn_Click);
-            // 
-            // messageTitleLbl
-            // 
-            this.messageTitleLbl.AutoSize = true;
-            this.messageTitleLbl.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.messageTitleLbl.ForeColor = System.Drawing.Color.Black;
-            this.messageTitleLbl.Location = new System.Drawing.Point(7, 6);
-            this.messageTitleLbl.Name = "messageTitleLbl";
-            this.messageTitleLbl.Size = new System.Drawing.Size(33, 15);
-            this.messageTitleLbl.TabIndex = 5;
-            this.messageTitleLbl.Text = "Info";
             // 
             // achievementImage3
             // 
@@ -151,6 +91,46 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.achievementImage1.TabStop = false;
             this.achievementImage1.Visible = false;
             // 
+            // messageTextLbl
+            // 
+            this.messageTextLbl.AutoSize = true;
+            this.messageTextLbl.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.messageTextLbl.ForeColor = System.Drawing.Color.MediumPurple;
+            this.messageTextLbl.Location = new System.Drawing.Point(56, 39);
+            this.messageTextLbl.Name = "messageTextLbl";
+            this.messageTextLbl.Size = new System.Drawing.Size(33, 15);
+            this.messageTextLbl.TabIndex = 4;
+            this.messageTextLbl.Text = "Info";
+            // 
+            // UnderstandBtn
+            // 
+            this.UnderstandBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.UnderstandBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.UnderstandBtn.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
+            this.UnderstandBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.UnderstandBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.UnderstandBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UnderstandBtn.Font = new System.Drawing.Font("Georgia", 12F);
+            this.UnderstandBtn.ForeColor = System.Drawing.Color.BlueViolet;
+            this.UnderstandBtn.Location = new System.Drawing.Point(394, 249);
+            this.UnderstandBtn.Name = "UnderstandBtn";
+            this.UnderstandBtn.Size = new System.Drawing.Size(120, 30);
+            this.UnderstandBtn.TabIndex = 3;
+            this.UnderstandBtn.Text = "Cool";
+            this.UnderstandBtn.UseVisualStyleBackColor = false;
+            this.UnderstandBtn.Click += new System.EventHandler(this.UnderstandBtn_Click);
+            // 
+            // messageTitleLbl
+            // 
+            this.messageTitleLbl.AutoSize = true;
+            this.messageTitleLbl.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.messageTitleLbl.ForeColor = System.Drawing.Color.Black;
+            this.messageTitleLbl.Location = new System.Drawing.Point(7, 6);
+            this.messageTitleLbl.Name = "messageTitleLbl";
+            this.messageTitleLbl.Size = new System.Drawing.Size(33, 15);
+            this.messageTitleLbl.TabIndex = 5;
+            this.messageTitleLbl.Text = "Info";
+            // 
             // CustomMessageBox2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,9 +157,8 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label messageTextLbl;
-        private System.Windows.Forms.Button PlayTryAgainBtn;
+        private System.Windows.Forms.Button UnderstandBtn;
         private System.Windows.Forms.Label messageTitleLbl;
-        private System.Windows.Forms.Button ExitBtn;
         public System.Windows.Forms.PictureBox achievementImage1;
         public System.Windows.Forms.PictureBox achievementImage3;
         public System.Windows.Forms.PictureBox achievementImage2;

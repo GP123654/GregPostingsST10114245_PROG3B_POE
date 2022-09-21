@@ -21,6 +21,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
     //Class
     public partial class BoringGameOne : Form
     {
+
         ////////////////////////////////////////////////////////
         // These are different variables that are being declared
         // and some are being initialized as well. They are used
@@ -339,7 +340,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
         //----------------------------------------------------------------------------------------------//
         /// <summary>
-        /// This will make the timer start and the book cart list visible
+        /// Start Button Click Method - This will make the timer start and the book cart list visible
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -349,10 +350,10 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             {
                 /** Calling the GenerateAndDisplyRandomNumbers Method */
                 this.wGDeweyDecimalNumberGenerator.GenerateAndDisplyRandomNumbers(bookCartUnsortedListBox);
-                //Starts the timer
+                //Starts the boringGameTimer timer
                 this.boringGameTimer.Start();
-                //Disables the start button
-                this.startBtn.Enabled = false;
+                //Hides the startBtn button
+                this.startBtn.Visible = false;
 
                 /** Calling the SortList Method */
                 SortList();
@@ -365,7 +366,78 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             }
         }
 
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Try Again Button Click Method - 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TryAgainBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                /** Calling the Reset Method */
+                Reset();
+
+                //Hides the tryAgainBtn button
+                this.tryAgainBtn.Visible = false;
+
+                /** Calling the GenerateAndDisplyRandomNumbers Method */
+                this.wGDeweyDecimalNumberGenerator.GenerateAndDisplyRandomNumbers(bookCartUnsortedListBox);
+                //Starts the timer
+                this.boringGameTimer.Start();
+
+                /** Calling the SortList Method */
+                SortList();
+
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }
+        }
+
         #endregion
+
+
+        public void Reset()
+        {
+            try
+            {
+                //Resetting the listBoxes
+                this.bookCartUnsortedListBox.Items.Clear();
+                this.bookShelfSortedListBox.Items.Clear();
+                this.checkOrderListBox.Items.Clear();
+
+                //Resetting the timer
+                this.ms = 1;
+                this.s = 45;
+                this.m = 0;
+
+                //Resetting the progressBar
+                this.totalProgressBar = 0;
+                this.progressBar = 0;
+                this.gameProgressBar.Value = 0;
+
+                //Resetting the numbers in the correct order
+                this.itemCheckCount = 0;
+                this.numCorrectLbl.Text = "";
+
+                //Resetting the number of moves
+                this.numberOfMoves = 0;
+                this.totalNumberOfMoves = 0;
+                this.numMovesMadeLbl.Text = "";
+
+                //Resetting the deweyNums List list of numbers
+                this.wGDeweyDecimalNumberGenerator.deweyNums.Clear();
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }
+        }
 
 
         ////////////////////////////////////////////////////////
@@ -389,7 +461,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         /// <summary>
         /// Seconds for timer
         /// </summary>
-        private int s = 40;
+        private int s = 45;
 
         /// <summary>
         /// Minutes for timer
@@ -481,14 +553,15 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
                     s = 0;
                     m = 0;
 
-                    //Disables the BookCartUnsortedListBox listbox
-                    this.bookCartUnsortedListBox.Enabled = false;
-
+                    //Creating an object of the CustomMessageBox2 form
                     CustomMessageBox2 customMessageBox2 = new CustomMessageBox2();
+                    //Setting the message to the ran out of time message
                     customMessageBox2.RanOutOfTimeMessage();
+                    //Showing the CustomMessageBox2 form
                     customMessageBox2.Show();
 
-
+                    //Makes the tryAgainBtn button visible
+                    this.tryAgainBtn.Visible = true;
                 }
             }           
             catch (Exception ex)
@@ -551,6 +624,9 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
                 //Showing the CustomMessageBox2 form
                 customMessageBox2.Show();
+
+                //Makes the tryAgainBtn button visible
+                this.tryAgainBtn.Visible = true;
             }
             //Otherwise it will continue to check if the items are in the correct order
             else
@@ -592,11 +668,11 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         public void IncreaseProgressBar()
         {
             //Setting the totalProgressBar value to equal the progressBar value plus 10
-            totalProgressBar = progressBar + 10;
+            this.totalProgressBar = this.progressBar + 10;
             //Setting the progressBar value to equal the totalProgressBar value
-            progressBar = totalProgressBar;
+            this.progressBar = this.totalProgressBar;
             //Setting the value of the gameProgressBar progress bar to equal the totalProgressBar value
-            gameProgressBar.Value = totalProgressBar;
+            this.gameProgressBar.Value = this.totalProgressBar;
         }
 
         //----------------------------------------------------------------------------------------------//
@@ -606,11 +682,11 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         public void IncreaseNumberOfMoves()
         {
             //Setting the totalNumberOfMoves value to equal the numberOfMoves value plus 1
-            totalNumberOfMoves = numberOfMoves + 1;
+            this.totalNumberOfMoves = this.numberOfMoves + 1;
             //Setting the numberOfMoves value to equal the totalNumberOfMoves value
-            numberOfMoves = totalNumberOfMoves;
+            this.numberOfMoves = this.totalNumberOfMoves;
             //Setting the text of the numMovesMadeLbl label to equal the totalNumberOfMoves value
-            numMovesMadeLbl.Text = (totalNumberOfMoves).ToString();
+            this.numMovesMadeLbl.Text = (this.totalNumberOfMoves).ToString();
         }
 
         #endregion
@@ -639,8 +715,10 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.wGDeweyDecimalNumberGenerator.deweyNums.Sort();
 
             //Other sorting methods 
-            //wGSortingAlgorithims.EasySort(checkOrder);
-            //wGSortingAlgorithims.EasySortWithLINQ(checkOrder);
+            //wGSortingAlgorithims.EasySort(checkOrderListBox);
+            //wGSortingAlgorithims.EasySortWithLINQ(checkOrderListBox);
+            //wGSortingAlgorithims.BubbleSort(this.wGDeweyDecimalNumberGenerator.deweyNums.ToArray());
+            //wGSortingAlgorithims.QuickSort(this.wGDeweyDecimalNumberGenerator.deweyNums.ToArray());
 
             //For each number in the deweyNums List<string> 
             foreach (var num in this.wGDeweyDecimalNumberGenerator.deweyNums)
@@ -652,6 +730,35 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
         #endregion
 
+
+        ////////////////////////////////////////////////////////
+        // This is for when the BoringGameOne form is closing.
+        ////////////////////////////////////////////////////////
+
+        //BoringGameOne Form Closing Method
+
+        #region BoringGameOne Form Closing Method
+
+        //----------------------------------------------------------------------------------------------//
+        //Form Closing Methods
+
+        /// <summary>
+        /// BoringGameOne Closing Method - It will take you back to the main menu / Form1 form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BoringGameOne_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Creating an object of the Form1 form
+            Form1 mainMenu = new Form1();
+            //Showing the Form1 form
+            mainMenu.Show();
+            //Hiding the Game Mode Menu / Game1GameMode form
+            this.Hide();
+        }
+
+        #endregion
+       
     }
 }
 //---------------------------------------ooo000 END OF FILE 000ooo--------------------------------------//

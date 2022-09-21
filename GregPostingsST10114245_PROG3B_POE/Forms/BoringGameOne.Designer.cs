@@ -281,7 +281,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.tryAgainBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tryAgainBtn.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tryAgainBtn.ForeColor = System.Drawing.Color.BlueViolet;
-            this.tryAgainBtn.Location = new System.Drawing.Point(640, 315);
+            this.tryAgainBtn.Location = new System.Drawing.Point(897, 315);
             this.tryAgainBtn.MinimumSize = new System.Drawing.Size(220, 40);
             this.tryAgainBtn.Name = "tryAgainBtn";
             this.tryAgainBtn.Size = new System.Drawing.Size(220, 40);
@@ -289,6 +289,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.tryAgainBtn.Text = "Try Again";
             this.tryAgainBtn.UseVisualStyleBackColor = false;
             this.tryAgainBtn.Visible = false;
+            this.tryAgainBtn.Click += new System.EventHandler(this.TryAgainBtn_Click);
             // 
             // BoringGameOne
             // 
@@ -320,6 +321,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.Name = "BoringGameOne";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Where That Book Go?";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BoringGameOne_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -345,7 +347,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListBox checkOrderListBox;
-        public System.Windows.Forms.Button startBtn;
-        public System.Windows.Forms.Button tryAgainBtn;
+        private System.Windows.Forms.Button startBtn;
+        private System.Windows.Forms.Button tryAgainBtn;
     }
 }
