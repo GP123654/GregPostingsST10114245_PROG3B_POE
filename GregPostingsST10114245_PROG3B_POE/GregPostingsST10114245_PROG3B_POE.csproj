@@ -110,6 +110,7 @@
     <Compile Include="Forms\Levels.Designer.cs">
       <DependentUpon>Levels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Game2Classes\Dictionary.cs" />
     <Compile Include="UserControls\BookDrawing.cs">
       <SubType>UserControl</SubType>
     </Compile>

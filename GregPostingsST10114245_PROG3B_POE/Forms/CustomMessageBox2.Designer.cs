@@ -156,11 +156,11 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label messageTextLbl;
         private System.Windows.Forms.Button UnderstandBtn;
-        private System.Windows.Forms.Label messageTitleLbl;
         public System.Windows.Forms.PictureBox achievementImage1;
         public System.Windows.Forms.PictureBox achievementImage3;
         public System.Windows.Forms.PictureBox achievementImage2;
+        public System.Windows.Forms.Label messageTextLbl;
+        public System.Windows.Forms.Label messageTitleLbl;
     }
 }
