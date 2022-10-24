@@ -63,7 +63,6 @@ namespace GregPostingsST10114245_PROG3B_POE
             this.identifyAreaBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.identifyAreaBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.identifyAreaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.identifyAreaBtn.Enabled = false;
             this.identifyAreaBtn.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
             this.identifyAreaBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.identifyAreaBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
