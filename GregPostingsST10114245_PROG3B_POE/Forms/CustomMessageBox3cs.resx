@@ -117,4 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Welcome to: What that category mean?
+
+Introduction:
+This game focuses more on the top level category of the dewey decimal system. This is the 
+general topic witch is defined by the first three numbers or even just the first.
+EG. 100 is general knowledge. Then after the general topics they will get more defined.
+We will explain more later.
+
+The Game:
+In this game you will have to match the two colunms together. You will have to match the top
+level of the call numbers to their descriptions as well as the descriptions to their call numbers.
+
+How to Play:
+Once you begin the game the two colunms will be populated with answers in the left hand
+colunm and questions in the right hand colunm.
+
+You will need to match the answers to the questions. The questions and answers will
+alternate between top level call numbers and their descriptions. To match them you
+will have to drag an answer into the texbox of the correct description. There are four
+correct answers for each question. Once you think you have answered the question
+click the check answers button. You will then be given a score and if you would 
+like to play again click the play again button.
+
+Click the start button to begin. Have Fun :) </value>
+  </data>
 </root>

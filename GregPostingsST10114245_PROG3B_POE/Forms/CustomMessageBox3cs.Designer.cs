@@ -29,10 +29,11 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomMessageBox3cs));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.readyButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -55,10 +56,10 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.readyButton);
             this.panel2.Location = new System.Drawing.Point(5, 24);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(540, 290);
+            this.panel2.Size = new System.Drawing.Size(690, 510);
             this.panel2.TabIndex = 8;
             // 
             // label2
@@ -66,28 +67,29 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label2.Location = new System.Drawing.Point(56, 39);
+            this.label2.Location = new System.Drawing.Point(43, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 15);
+            this.label2.Size = new System.Drawing.Size(622, 360);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Info";
+            this.label2.Text = resources.GetString("label2.Text");
             // 
-            // button1
+            // readyButton
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Georgia", 12F);
-            this.button1.ForeColor = System.Drawing.Color.BlueViolet;
-            this.button1.Location = new System.Drawing.Point(394, 249);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 30);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "I understand";
-            this.button1.UseVisualStyleBackColor = false;
+            this.readyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.readyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.readyButton.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
+            this.readyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.readyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.readyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.readyButton.Font = new System.Drawing.Font("Georgia", 12F);
+            this.readyButton.ForeColor = System.Drawing.Color.BlueViolet;
+            this.readyButton.Location = new System.Drawing.Point(544, 469);
+            this.readyButton.Name = "readyButton";
+            this.readyButton.Size = new System.Drawing.Size(120, 30);
+            this.readyButton.TabIndex = 3;
+            this.readyButton.Text = "I\'m Ready";
+            this.readyButton.UseVisualStyleBackColor = false;
+            this.readyButton.Click += new System.EventHandler(this.ReadyButton_Click);
             // 
             // label3
             // 
@@ -96,16 +98,16 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(7, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 15);
+            this.label3.Size = new System.Drawing.Size(182, 15);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Info";
+            this.label3.Text = "What that category mean?";
             // 
             // CustomMessageBox3cs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumPurple;
-            this.ClientSize = new System.Drawing.Size(550, 320);
+            this.ClientSize = new System.Drawing.Size(700, 540);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
@@ -124,7 +126,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button readyButton;
         private System.Windows.Forms.Label label3;
     }
 }

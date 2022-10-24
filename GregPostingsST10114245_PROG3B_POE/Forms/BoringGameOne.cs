@@ -863,9 +863,9 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 //                                             |         |
 //                                             |         | 
 //        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ |_________| //////////////////////////////////
-
+//
 //                          Whatever you do, work at it with all your heart,
 //                               as working for the Lord, not for men
 //                                                    - Colossians 3: 23 NIV
-
+//
 //        ///////////////////////////////////////////////////////////////////////////////////
