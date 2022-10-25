@@ -4,7 +4,7 @@
  * Class: BCA3 G7
  * Task: POE Task 2
  * Start Date and Time: 19 October 2022 at 9:30
- * Finish Date and Time: 25 October 2022 at 15:20
+ * Finish Date and Time: 25 October 2022 at 10:40
  * 
  */
 
@@ -314,45 +314,57 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
         #region Achievements
 
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Setting the text of the congradulations message
+        /// </summary>
         public void CustomMessageBox()
         {
-            customMessageBox2.messageTextLbl.Text = "Well done. You completed the challange. Your score was: " + answersCorrect +  "/4 \n" +
-                " Here is a badge for you. :)";
+            //Setting the message for the congradulations message and letting the user know their score
+            customMessageBox2.messageTextLbl.Text = "Well done. You completed the challange. Your score was: " + 
+                answersCorrect +  "/4 \n" + " Here is a badge for you. :)";
         }
 
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// This just deterimnes the achievement awarded determied by the users
+        /// score as well as the message they recieve
+        /// </summary>
         public void AchievementCheck()
         {
             try
             {
-                //Setting the message to the congradulations message
+                //Setting the message for the congradulations message
                 customMessageBox2.CongradulationsMessage();
+                CustomMessageBox();
 
                 //If the seconds left after the timer stops is more than or equal to 15
                 if (answersCorrect == 4)
                 {
                     //Shows the achievementImage1 gold achievement image
                     customMessageBox2.achievementImage1.Visible = true;
-                    CustomMessageBox();
                 }
                 //If the seconds left after the timer stops is less than or equal to 14 and more than or equal to 6
                 else if (answersCorrect == 3)
                 {
                     //Shows the achievementImage2 silver achievement image
                     customMessageBox2.achievementImage2.Visible = true;
-                    CustomMessageBox();
                 }
                 //Otherwise if the seconds left after the timer stops is less than or equal to 5 and more than 0
                 else if (answersCorrect == 2 || answersCorrect == 1)
                 {
                     //Shows the achievementImage3 bronze achievement image
                     customMessageBox2.achievementImage3.Visible = true;
-                    CustomMessageBox();
                 }
                 //If the seconds left after the timer stops is less than or equal to 14 and more than or equal to 6
                 else if (answersCorrect == 0)
                 {
+                    //Setting the title for the unsuccessful message
                     customMessageBox2.messageTitleLbl.Text = "Oh No !!!";
+                    //Setting the message for the unsuccessful message
                     customMessageBox2.messageTextLbl.Text = "Unfortunately you did not get any correct";
+
+                    //Making all the achievement invisible
                     customMessageBox2.achievementImage1.Visible = false;
                     customMessageBox2.achievementImage2.Visible = false;
                     customMessageBox2.achievementImage3.Visible = false;
@@ -369,6 +381,40 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             }
         }
 
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// This checks to see what answers are correct and which achievement the user gets
+        /// </summary>
+        private void AnswerAchievementCheck()
+        {
+            //Stops the game2GameTimer timer
+            this.game2GameTimer.Stop();
+            //Makes the playAgainBtn Button visible
+            this.playAgainBtn.Visible = true;
+            //Makes the checkAnswersBtn Button invisible
+            this.checkAnswersBtn.Visible = false;
+
+            //Checks the count of which setup is used and then check the aswers of the corresponding setup
+            switch (counter)
+            {
+                case 1:
+                    /** Calling the CheckAnswer3 method */
+                    CheckAnswer3();
+                    break;
+                case 2:
+                    /** Calling the CheckAnswer1 method */
+                    CheckAnswer1();
+                    break;
+                case 3:
+                    /** Calling the CheckAnswer2 method */
+                    CheckAnswer2();
+                    break;
+            }
+
+            /** Calling the AchievementCheck method */
+            AchievementCheck();
+        }
+
         #endregion
 
 
@@ -383,71 +429,67 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
         //----------------------------------------------------------------------------------------------//
         /// <summary>
-        /// 
+        /// This button will check the answers for the different setups
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void CheckAnswersBtn_Click(object sender, EventArgs e)
         {
-            this.game2GameTimer.Stop();
-            this.playAgainBtn.Visible = true;
-            this.checkAnswersBtn.Visible = false;
-            
-
-            switch (counter)
-            {
-                case 1:
-                    CheckAnswer3();
-                    break;
-                case 2:
-                    CheckAnswer1();
-                    break;
-                case 3:
-                    CheckAnswer2();
-                    break;
-            }
-
-            AchievementCheck();
+            /** Calling the AnswerAchievementCheck method */
+            AnswerAchievementCheck();
         }
 
         //----------------------------------------------------------------------------------------------//
         /// <summary>
-        /// 
+        /// This button starts the game by displaying the different lables and populating
+        /// them with random questions and answers. It also starts the timer.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void StartBtn_Click(object sender, EventArgs e)
         {
+            /** Calling the LabelVisibility method */
             LabelVisibility(true);
+            /** Calling the RandomQandA1 method */
             RandomQandA1();
+            //Starts the game2GameTimer timer
             game2GameTimer.Start();
+            //Makes the startBtn Button invisible
             startBtn.Visible = false;
+            //Makes the checkAnswersBtn Button visible
             checkAnswersBtn.Visible = true;
         }
 
         //----------------------------------------------------------------------------------------------//
         /// <summary>
-        /// 
+        /// This button will reset everything and repopulate the lables with random 
+        /// questions and answers using a different setup.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void PlayAgainBtn_Click(object sender, EventArgs e)
         {
+            /** Calling the ResetGame2 method */
             ResetGame2();
 
-            switch(counter)
+            //Checks the count to determine which setup is used
+            switch (counter)
             {
                 case 1:
+                    /** Calling the RandomQandA1 method */
                     RandomQandA1();
                     break;
                 case 2:
+                    /** Calling the RandomQandA2 method */
                     RandomQandA2();
                     break;
                 case 3:
+                    /** Calling the RandomQandA3 method */
                     RandomQandA3();
                     break;
             }
 
+            //Makes the playAgainBtn Button invisible
             playAgainBtn.Visible = false;
         }
 
@@ -467,16 +509,18 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
         //----------------------------------------------------------------------------------------------//
         /// <summary>
-        /// 
+        /// This will change the visibility of all the question and answer labels
         /// </summary>
         /// <param name="areTheyVisible"></param>
         public void LabelVisibility(bool areTheyVisible)
         {
+            //Answers
             this.answer1Lbl.Visible = areTheyVisible;
             this.answer3Lbl.Visible = areTheyVisible;
             this.answer4Lbl.Visible = areTheyVisible;
             this.answer2Lbl.Visible = areTheyVisible;
             
+            //Questions
             this.question1Lbl.Visible = areTheyVisible;
             this.question2Lbl.Visible = areTheyVisible;
             this.question3Lbl.Visible = areTheyVisible;
@@ -488,11 +532,12 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
         //----------------------------------------------------------------------------------------------//
         /// <summary>
-        /// 
+        /// This will determine if the textboxes are enabled or disabled
         /// </summary>
         /// <param name="areTheyEnabled"></param>
         public void TextBoxesEnabled(bool areTheyEnabled)
         {
+            //TextBoxes for answers
             this.answerTextBox1.Enabled = areTheyEnabled;
             this.answerTextBox2.Enabled = areTheyEnabled;
             this.answerTextBox3.Enabled = areTheyEnabled;
@@ -502,8 +547,13 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.answerTextBox7.Enabled = areTheyEnabled;
         }
 
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// This resets the text in the textboxes
+        /// </summary>
         public void TextBoxesRemoveText()
         {
+            //TextBoxes for answers
             this.answerTextBox1.Text = "";
             this.answerTextBox2.Text = "";
             this.answerTextBox3.Text = "";
@@ -515,7 +565,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
         //----------------------------------------------------------------------------------------------//
         /// <summary>
-        /// 
+        /// This resets all the game features
         /// </summary>
         public void ResetGame2()
         {
@@ -524,18 +574,24 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.s = 50;
             this.m = 0;
 
+            //Resets the progress bar
             this.countdownProgressBar.Value = 100;
 
+            //Starts the game2GameTimer timer
             this.game2GameTimer.Start();
 
+            /** Calling the TextBoxesRemoveText method */
             TextBoxesRemoveText();
 
+            //Makes the checkAnswersBtn Button visible
             checkAnswersBtn.Visible = true;
 
+            //Makes all the achievements invisible
             customMessageBox2.achievementImage1.Visible = false;
             customMessageBox2.achievementImage2.Visible = false;
             customMessageBox2.achievementImage3.Visible = false;
 
+            //Sets the answers correct back to 0
             answersCorrect = 0;
         }
 
@@ -573,6 +629,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
                     /** Calling the Beep Method */
                     Beeps();
+                    //Decreases the countdownProgressBar progressbar every second
                     countdownProgressBar.Value = countdownProgressBar.Value - 2;
                 }
                 if (s == 0)
@@ -636,15 +693,8 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
                     s = 0;
                     m = 0;
 
-                    //Creating an object of the CustomMessageBox2 form
-                    CustomMessageBox2 customMessageBox2 = new CustomMessageBox2();
-                    //Setting the message to the ran out of time message
-                    customMessageBox2.RanOutOfTimeMessage();
-                    //Showing the CustomMessageBox2 form
-                    customMessageBox2.Show();
-
-                    //Makes the tryAgainBtn button visible
-                    this.playAgainBtn.Visible = true;
+                    /** Calling the AnswerAchievementCheck method */
+                    AnswerAchievementCheck();                  
                 }
             }
             catch (Exception ex)
@@ -681,6 +731,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
                 //If the user drags a valid item
                 if (this.answer1Lbl.Text != null)
                 {
+                    /** Calling the TextBoxesEnabled Method */
                     TextBoxesEnabled(true);
                     //It will be copied from the BookCartUnsortedListBox listbox to the BookShelfSortedListBox listbox
                     this.answer1Lbl.DoDragDrop(this.answer1Lbl.Text, DragDropEffects.Copy);
@@ -711,6 +762,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
                 //If the user drags a valid item
                 if (this.answer2Lbl.Text != null)
                 {
+                    /** Calling the TextBoxesEnabled Method */
                     TextBoxesEnabled(true);
                     //It will be copied from the BookCartUnsortedListBox listbox to the BookShelfSortedListBox listbox
                     this.answer2Lbl.DoDragDrop(this.answer2Lbl.Text, DragDropEffects.Copy);
@@ -741,6 +793,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
                 //If the user drags a valid item
                 if (this.answer3Lbl.Text != null)
                 {
+                    /** Calling the TextBoxesEnabled Method */
                     TextBoxesEnabled(true);
                     //It will be copied from the BookCartUnsortedListBox listbox to the BookShelfSortedListBox listbox
                     this.answer3Lbl.DoDragDrop(this.answer3Lbl.Text, DragDropEffects.Copy);
@@ -771,6 +824,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
                 //If the user drags a valid item
                 if (this.answer4Lbl.Text != null)
                 {
+                    /** Calling the TextBoxesEnabled Method */
                     TextBoxesEnabled(true);
                     //It will be copied from the BookCartUnsortedListBox listbox to the BookShelfSortedListBox listbox
                     this.answer4Lbl.DoDragDrop(this.answer4Lbl.Text, DragDropEffects.Copy);
@@ -843,9 +897,10 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         {
             try
             {
+                //Copies the answer labels text and puts it into the answerTextBox1 textbox
                 this.answerTextBox1.Text = (string)e.Data.GetData(DataFormats.Text);
+                /** Calling the TextBoxesEnabled Method */
                 TextBoxesEnabled(false);
-
             }
             catch (Exception ex)
             {
@@ -894,9 +949,10 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         {
             try
             {
+                //Copies the answer labels text and puts it into the answerTextBox2 textbox
                 this.answerTextBox2.Text = (string)e.Data.GetData(DataFormats.Text);
+                /** Calling the TextBoxesEnabled Method */
                 TextBoxesEnabled(false);
-
             }
             catch (Exception ex)
             {
@@ -945,9 +1001,10 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         {
             try
             {
+                //Copies the answer labels text and puts it into the answerTextBox3 textbox
                 this.answerTextBox3.Text = (string)e.Data.GetData(DataFormats.Text);
+                /** Calling the TextBoxesEnabled Method */
                 TextBoxesEnabled(false);
-
             }
             catch (Exception ex)
             {
@@ -996,9 +1053,10 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         {
             try
             {
+                //Copies the answer labels text and puts it into the answerTextBox4 textbox
                 this.answerTextBox4.Text = (string)e.Data.GetData(DataFormats.Text);
+                /** Calling the TextBoxesEnabled Method */
                 TextBoxesEnabled(false);
-
             }
             catch (Exception ex)
             {
@@ -1047,9 +1105,10 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         {
             try
             {
+                //Copies the answer labels text and puts it into the answerTextBox5 textbox
                 this.answerTextBox5.Text = (string)e.Data.GetData(DataFormats.Text);
+                /** Calling the TextBoxesEnabled Method */
                 TextBoxesEnabled(false);
-
             }
             catch (Exception ex)
             {
@@ -1098,9 +1157,10 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         {
             try
             {
+                //Copies the answer labels text and puts it into the answerTextBox6 textbox
                 this.answerTextBox6.Text = (string)e.Data.GetData(DataFormats.Text);
+                /** Calling the TextBoxesEnabled Method */
                 TextBoxesEnabled(false);
-
             }
             catch (Exception ex)
             {
@@ -1149,9 +1209,10 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         {
             try
             {
+                //Copies the answer labels text and puts it into the answerTextBox7 textbox
                 this.answerTextBox7.Text = (string)e.Data.GetData(DataFormats.Text);
+                /** Calling the TextBoxesEnabled Method */
                 TextBoxesEnabled(false);
-
             }
             catch (Exception ex)
             {
@@ -1160,166 +1221,43 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             }
         }
 
+
         #endregion
 
 
+        ////////////////////////////////////////////////////////
+        // This is for when the Game2 form is closing.
+        ////////////////////////////////////////////////////////
 
+        //BoringGameOne Form Closing Method
 
+        #region Game2 Form Closing Method
 
-        //TESTS
+        //----------------------------------------------------------------------------------------------//
+        //Form Closing Method
 
-        #region TESTS
-
-
-        //------------------------------------------------------------------------------------//
-        //Trying to get a random label tset 1
-
-
-        /*
-        List<Label> tBoxes = new List<Label>();
-        Label lbl;
-
-        public void PopTextBoxList()
+        /// <summary>
+        /// Game2 Closing Method - It will take you back to the main menu / Form1 form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Game2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            tBoxes.AddRange((IEnumerable<Label>)label1);
-            tBoxes.AddRange((IEnumerable<Label>)label2);
-            tBoxes.AddRange((IEnumerable<Label>)label3);
-            tBoxes.AddRange((IEnumerable<Label>)label5);
-        }
-
-
-        public IEnumerable<Label> RandomTextBox<Label>()
-        {
-            //Random rand = new Random();
-            //List<Label> tBox = Enumerable.ToList(tBoxes);
-            int size = tBoxes.Count;
-            while (true)
+            try
             {
-                //lbl = tBoxes[random.Next(size)];
-                yield return (Label)(IEnumerable<Label>)tBoxes[random.Next(size)];
-                //return (IEnumerable<Label>)lbl;
+                //Creating an object of the Form1 form
+                Form1 mainMenu = new Form1();
+                //Showing the Form1 form
+                mainMenu.Show();
+                //Hiding the Game Mode Menu / Game1GameMode form
+                this.Hide();
             }
-            
-        }*/
-
-
-
-        //------------------------------------------------------------------------------------//
-        //Trying to get a random label tset 2
-
-
-        /*
-        public Dictionary<int, Label> labels = new Dictionary<int, Label>();
-
-        public void PopLabels2()
-        {
-            labels.Add(1, label1);
-            labels.Add(2, label5);
-            labels.Add(3, label2);
-            labels.Add(4, label3);
-        }
-
-
-        public IEnumerable<TValue> RandomLabelss<TKey, TValue>(IDictionary<TKey, TValue> dict)
-        {
-            //Random rand = new Random();
-            List<TValue> keys = Enumerable.ToList(dict.Values);
-            int size = dict.Count;
-            while (true)
+            catch (Exception ex)
             {
-                yield return keys[random.Next(size)];
+                //Error message
+                MessageBox.Show("Error is: " + ex);
             }
         }
-
-
-
-        public void TestRandomLabel()
-        {
-            RandomLabelss() = dictionary.GetRandomValue();
-        }
-        */
-
-
-
-        //------------------------------------------------------------------------------------//
-
-        /*
-        public void Test()
-        {
-            
-            for(int i = 0; i > 4; i++)
-            {
-                
-            }
-
-            
-            foreach (KeyValuePair<string, string> item in dictionary.bookQna)
-            {
-                //item.Key = dictionary.GetRandomKey().ToString();
-
-                //RandomTextBox() = item.Value;
-
-                //PopTextBoxList();
-                //Label lb = RandomTextBox();
-
-
-                //string oiod = dictionary.GetRandomValue();
-                //dictionary.bookQna.TryGetValue(dictionary.GetRandomKey(), out oiod);
-
-                //string val;
-
-                //val = dictionary.GetRandomValue();
-                //val = item.Value;
-
-                
-                for (int i = 0; i > 4; i++)
-                {
-                    label5.Text = item.Value[i].ToString();
-                    label8.Text = item.Key.ToString();
-                }
-
-                
-            
-                //label1.Text = val;
-                label6.Text = item.Key.ToString();
-
-
-                //label1.Text = item.Value;
-                //label6.Text = item.Key.ToString();
-
-                label2.Text = item.Value;
-                label9.Text = item.Key.ToString();
-
-                //label5.Text = item.Value;
-                label11.Text = item.Key.ToString();
-
-                label3.Text = item.Value;
-                label13.Text = item.Key.ToString();
-
-            }
-        }*/
-
-
-        //------------------------------------------------------------------------------------//
-
-        /*
-        public void HardcodedTest()
-        {
-            label1.Text = dictionary.bookQna["100"];
-            label2.Text = dictionary.bookQna["300"];
-            label3.Text = dictionary.bookQna2["Math and Science"].ToString();
-            label5.Text = dictionary.bookQna2["Literature"].ToString();
-
-
-            label6.Text = dictionary.bookQna["500"];
-            label7.Text = dictionary.bookQna["000"];
-            label9.Text = dictionary.bookQna2["Religions"].ToString();
-            label10.Text = dictionary.bookQna2[label2.Text].ToString();
-            label11.Text = dictionary.bookQna["800"];
-            label12.Text = dictionary.bookQna2[label1.Text].ToString();
-            label13.Text = dictionary.bookQna["400"];
-        }*/
-
 
         #endregion
 
@@ -1350,6 +1288,12 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 //                                     \                           /
 //                                      \_________________________/
 //                                 
+//                          ////////////////////////////////////////////////////////
+//
+//                               You make known to me the path of life; in your
+//                                  presence there is fullness of joy; at
+//                                      your right hand are pleasures
+//                                        forevermore. -Psalm 16:11
 //                                 
-//                                 
-//                                 
+//                          ////////////////////////////////////////////////////////
+//                          

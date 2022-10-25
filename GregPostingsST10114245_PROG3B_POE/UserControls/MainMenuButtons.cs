@@ -63,11 +63,21 @@ namespace GregPostingsST10114245_PROG3B_POE
             try
             {
                 //Creating an object of the Game1GameMode form
-                Game1GameMode game1GameMode = new Game1GameMode();
+                //Game1GameMode game1GameMode = new Game1GameMode();
                 //Showing the game1GameMode form
-                game1GameMode.Show();
+                //game1GameMode.Show();
+
+                //Creating an object of the BoringGameOne form
+                BoringGameOne boringGameOne = new BoringGameOne();
+                //Showing the BoringGameOne form
+                boringGameOne.Show();
                 //Hiding the Main Menu / Form1 form
                 this.ParentForm.Hide();
+
+                //Creating an object of the CustomMessageBox form
+                CustomMessageBox cmb = new CustomMessageBox();
+                //Shows the instructions in the custom message box
+                cmb.Show();
             }
             catch (Exception ex)
             {
@@ -92,6 +102,11 @@ namespace GregPostingsST10114245_PROG3B_POE
                 game2.Show();
                 //Hiding the Main Menu / Form1 form
                 this.ParentForm.Hide();
+
+                //Creating an object of the CustomMessageBox form
+                CustomMessageBox3cs cmb3 = new CustomMessageBox3cs();
+                //Shows the instructions in the custom message box
+                cmb3.Show();
             }
             catch (Exception ex)
             {

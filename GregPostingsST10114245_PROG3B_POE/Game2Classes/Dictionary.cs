@@ -1,4 +1,12 @@
-﻿
+﻿/*
+ * Done By: Greg Postings ST10114245 
+ * Module: PROG 3B
+ * Class: BCA3 G7
+ * Task: POE Task 2
+ * Start Date and Time: 19 October 2022 at 9:30
+ * Finish Date and Time: 25 October 2022 at 10:40
+ * 
+ */
 
 //Imports
 using System;
@@ -29,24 +37,19 @@ namespace GregPostingsST10114245_PROG3B_POE.Game2Classes
         private Random random = new Random();
 
         /// <summary>
-        /// 
+        /// Creating a dictionary to store questions and answers
         /// </summary>
         public Dictionary<string, string> bookQna = new Dictionary<string, string>();
 
         /// <summary>
-        /// 
+        /// Creating a dictionary to store questions and answers in the reverse order
         /// </summary>
         public Dictionary<string, string> bookQna2 = new Dictionary<string, string>();
 
         /// <summary>
-        /// 
+        /// This stores a random key value from the dictionary
         /// </summary>
         private string bookCategory;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        //private string bookDescription;
 
         #endregion
 
@@ -101,19 +104,17 @@ namespace GregPostingsST10114245_PROG3B_POE.Game2Classes
 
 
         ////////////////////////////////////////////////////////
-        // These methods are used for generating the random
-        // topic numbers and authors letters. It then puts them
-        // together to make a random dewey decimal call number.
+        // These methods generate the random key values
         ////////////////////////////////////////////////////////
 
-        //Random Number Generator Methods
+        //Random Key Generator Methods
 
-        #region Random Number Generator
+        #region Random Key Generator
 
 
         //----------------------------------------------------------------------------------------------//
         /// <summary>
-        /// 
+        /// Creating a random generator for getting a random key from the dictionaries
         /// </summary>
         /// <typeparam name="TKey"></typeparam>
         /// <typeparam name="TValue"></typeparam>
@@ -121,257 +122,48 @@ namespace GregPostingsST10114245_PROG3B_POE.Game2Classes
         /// <returns></returns>
         public IEnumerable<TKey> RandomKeys<TKey, TValue>(IDictionary<TKey, TValue> dict)
         {
+            //Making a list of keys from the dictionary
             List<TKey> keys = Enumerable.ToList(dict.Keys);
+            //Getting the size of the dictionary
             int size = dict.Count;
             while (true)
             {
+                //Returning a random value from the list which will be a key from the dictionary
                 yield return keys[random.Next(size)];
             }
         }
 
         //----------------------------------------------------------------------------------------------//
         /// <summary>
-        /// 
+        /// Getting a random key from the first dictionary
         /// </summary>
         /// <returns></returns>
         public string GetRandomKey()
         {
-            foreach (var key in RandomKeys(bookQna).Take(8))//Was 7
+            foreach (var key in RandomKeys(bookQna).Take(8))
             {
+                //Assigning a random key value to the variable
                 bookCategory = key;
             }
+            //Returns the random key
             return bookCategory;
         }
 
         //----------------------------------------------------------------------------------------------//
         /// <summary>
-        /// 
+        /// Getting a random key from the second dictionary
         /// </summary>
         /// <returns></returns>
         public string GetRandomKey2()
         {
-            foreach (var key in RandomKeys(bookQna2).Take(4))//Was 3
+            foreach (var key in RandomKeys(bookQna2).Take(7))
             {
+                //Assigning a random key value to the variable
                 bookCategory = key;
             }
+            //Returns the random key
             return bookCategory;
         }
-
-
-        #endregion
-
-
-
-
-
-
-
-
-
-        //Random Values - Not used
-
-        #region WORKS BUT NOT USED
-
-        /*
-        public IEnumerable<TValue> RandomValues<TKey, TValue>(IDictionary<TKey, TValue> dict)
-        {
-            //Random rand = new Random();
-            List<TValue> values = Enumerable.ToList(dict.Values);
-            int size = dict.Count;
-            while (true)
-            {
-                yield return values[random.Next(size)];
-            }
-        }
-
-        
-        public string GetRandomValue()
-        {
-            foreach (var value in RandomValues(bookQna).Take(1))
-            {
-                bookDescription = value;                
-            }
-            return bookDescription;
-        }*/
-
-        #endregion
-
-
-
-
-        //TESTS
-
-        #region Tests
-
-        //Trying to get random one
-
-        /*
-
-        //----------------------------------------------------------------------------------------------//
-        /// <summary>
-        /// Creates the random dewey decimal call number
-        /// </summary>
-        /// <returns></returns>
-        //public string RandomDeweyCallNumber()
-        //{
-            //Three random letters for author
-            //string author = RandomAuthor(4);
-            //String to store the dewey decimal call number
-            //string deweyDecimal;
-
-            //Storing the different numbers and letter joined with dots for the dewey decimal call number
-            //deweyDecimal = author;
-
-            //Returning the dewey decimal number
-            //return author;
-        //}
-
-
-        public void RandomDeweyCallNumber2()
-        {
-            //Three random letters for author
-            //string author = RandomAuthor(4);
-
-            //MessageBox.Show(author);
-        }
-
-
-        //----------------------------------------------------------------------------------------------//
-        /// <summary>
-        /// Creates the random letters for the author
-        /// </summary>
-        /// <param name="numOfLetters"></param>
-        /// <returns></returns>
-        public void RandomAuthor()//int numOfbooks)
-        {
-            Pop();
-
-            string book = "";
-
-            try
-            {
-                //For loop to create the number of letters specified
-                //for (int i = 0; i < numOfbooks; i++)
-                //{
-                    foreach (var entry in bookQna)
-                    {
-                    //book = this.random.Next(bookQna.Values.).ToString();
-                    book = entry.Value;//this.random.Next(entry.Key).ToString();
-                    ;
-                        MessageBox.Show(book);
-                    }
-                
-                    
-                //}
-            }
-            catch (Exception ex)
-            {
-                //Error message
-                MessageBox.Show("Please select a valid item");
-            }
-            //Returning the letters in uppercase format
-            //return book;
-        }
-        
-
-
-
-
-        //Random Keys and Values
-
-        /*
-
-        public IEnumerable<TValue> RandomValuesAndKeys<TKey, TValue>(IDictionary<TKey, TValue> dict)
-        {
-            //Random rand = new Random();
-            List<TValue> values = Enumerable.ToList(dict.Values);
-            List<TKey> keys = Enumerable.ToList(dict.Keys);
-            int size = dict.Count;
-            while (true)
-            {
-                yield return values[random.Next(size)];
-            }
-        }
-
-        */
-
-
-
-        /*
-        public IEnumerable<KeyValuePair> RandomValuesAndKeys<TKey, KeyValuePair>(IDictionary<TKey, KeyValuePair> dict)
-        {
-            //Random rand = new Random();
-            List<KeyValuePair> values = Enumerable.ToList(dict.Values);
-            List<TKey> keys = Enumerable.ToList(dict.Keys);
-            int size = dict.Count;
-            while (true)
-            {
-                yield return values[random.Next(size)];
-            }
-        }
-        */
-
-
-
-
-        //Checking to see if printing values work
-
-        /*
-        public void Check()
-        {
-            Pop();
-            foreach (var entry in bookQna)
-            {
-                MessageBox.Show(entry.Key + entry.Value);
-            }
-        }
-        */
-
-
-        //Displaying the values with checks
-
-        /*
-        public string GetRandomValue()
-        {
-            //bookQna.Clear();
-            //Pop();
-            foreach (var value in RandomValues(bookQna).Take(1))
-            {
-                
-                if (!bookQna.ContainsValue(value))
-                {
-                    bookCategory = value;
-                }
-
-                //MessageBox.Show(value);
-                bookDescription = value;
-
-            }
-            return bookDescription;
-        }
-
-
-        public string GetRandomKey()
-        {
-            //bookQna.Clear();
-            //Pop();
-            foreach (var key in RandomKeys(bookQna).Take(1))
-            {
-                
-                if (!bookQna.ContainsValue(value))
-                {
-                    bookCategory = value;
-                }
-                
-                //MessageBox.Show(value);
-                bookCategory = key;
-
-            }
-            return bookCategory;
-        }
-
-        */
-
 
         #endregion
 
@@ -379,3 +171,42 @@ namespace GregPostingsST10114245_PROG3B_POE.Game2Classes
     }
 }
 //---------------------------------------ooo000 END OF FILE 000ooo--------------------------------------//
+
+
+//                  
+//                                   ___________________________________
+//                                  /    ___________________________    \
+//                                 /    /    ___________________    \    \
+//                                /    /    /   _____________   \    \    \
+//                               /    /    /   /  _________  \   \    \    \
+//                              /    /    /   /  /         \  \   \    \    \
+//                             /    /    /   /  /  _______  \  \   \    \    \
+//                            /    /    /   /  /  /       \  \  \   \    \    \
+//                           /    /    /   /  /  /   ___   \  \  \   \    \    \
+//                          /    /    /   /  /  /   /   \   \  \  \   \    \    \
+//                         /    /    /   /  /  /   / ___ \   \  \  \   \    \    \
+//                         |    |    |   |  |  |  / /   \ \   |  |  |   |    |    |
+//                         |    |    |   |  |  |  | |   |  |  |  |  |   |    |    |
+//                         |    |    |   |  |  |  | |   |  |  |  |  |   |    |    |
+//                         |    |    |   |  |  |  | |   |  |  |  |  |   |    |    |
+//                         |    |    |   |  |  |  | |   |  |  |  |  |   |    |    |
+//                         |    |    |   |  |  |  | |   |  |  |  |  |   |    |    |
+//          //////////////////////////////////////////////////////////////////////////////////////////////
+//
+//          I establish my covenant with you: Never again will all life be cut off by the waters of a flood;
+//          never again will there be a flood to destroy the earth.” And God said, “This is the sign of the
+//          covenant I am making between me and you and every living creature with you, a covenant for all
+//          generations to come: I have set my rainbow in the clouds, and it will be the sign of the covenant
+//          between me and the earth. Whenever I bring clouds over the earth and the rainbow appears in the
+//          clouds, I will remember my covenant between me and you and all living creatures of every kind.
+//          Never again will the waters become a flood to destroy all life. Whenever the rainbow appears in
+//          the clouds, I will see it and remember the everlasting covenant between God and all living
+//          creatures of every kind on the earth.”
+//
+//                      So God said to Noah, “This is the sign of the covenant I have established
+//                              between me and all life on the earth.”   - Genesis 9:11-17         
+      
+//          //////////////////////////////////////////////////////////////////////////////////////////////
+//          
+//          
+
