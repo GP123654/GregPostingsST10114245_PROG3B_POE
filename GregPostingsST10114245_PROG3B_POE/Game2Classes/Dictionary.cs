@@ -4,7 +4,7 @@
  * Class: BCA3 G7
  * Task: POE Task 2
  * Start Date and Time: 19 October 2022 at 9:30
- * Finish Date and Time: 25 October 2022 at 12:20
+ * Finish Date and Time: 25 October 2022 at 10:40
  * 
  */
 
@@ -156,7 +156,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Game2Classes
         /// <returns></returns>
         public string GetRandomKey2()
         {
-            foreach (var key in RandomKeys(bookQna2).Take(6))
+            foreach (var key in RandomKeys(bookQna2).Take(7))
             {
                 //Assigning a random key value to the variable
                 bookCategory = key;

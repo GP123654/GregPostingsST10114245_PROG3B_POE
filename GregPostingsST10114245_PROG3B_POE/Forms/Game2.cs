@@ -4,7 +4,7 @@
  * Class: BCA3 G7
  * Task: POE Task 2
  * Start Date and Time: 19 October 2022 at 9:30
- * Finish Date and Time: 25 October 2022 at 12:20
+ * Finish Date and Time: 25 October 2022 at 10:40
  * 
  */
 
@@ -320,6 +320,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         /// </summary>
         public void CustomMessageBox()
         {
+            //Setting the message for the congradulations message and letting the user know their score
             customMessageBox2.messageTextLbl.Text = "Well done. You completed the challange. Your score was: " + 
                 answersCorrect +  "/4 \n" + " Here is a badge for you. :)";
         }
@@ -380,6 +381,40 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             }
         }
 
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// This checks to see what answers are correct and which achievement the user gets
+        /// </summary>
+        private void AnswerAchievementCheck()
+        {
+            //Stops the game2GameTimer timer
+            this.game2GameTimer.Stop();
+            //Makes the playAgainBtn Button visible
+            this.playAgainBtn.Visible = true;
+            //Makes the checkAnswersBtn Button invisible
+            this.checkAnswersBtn.Visible = false;
+
+            //Checks the count of which setup is used and then check the aswers of the corresponding setup
+            switch (counter)
+            {
+                case 1:
+                    /** Calling the CheckAnswer3 method */
+                    CheckAnswer3();
+                    break;
+                case 2:
+                    /** Calling the CheckAnswer1 method */
+                    CheckAnswer1();
+                    break;
+                case 3:
+                    /** Calling the CheckAnswer2 method */
+                    CheckAnswer2();
+                    break;
+            }
+
+            /** Calling the AchievementCheck method */
+            AchievementCheck();
+        }
+
         #endregion
 
 
@@ -400,32 +435,8 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         /// <param name="e"></param>
         private void CheckAnswersBtn_Click(object sender, EventArgs e)
         {
-            //Stops the game2GameTimer timer
-            this.game2GameTimer.Stop();
-            //Makes the playAgainBtn Button visible
-            this.playAgainBtn.Visible = true;
-            //Makes the checkAnswersBtn Button invisible
-            this.checkAnswersBtn.Visible = false;
-            
-            //Checks the count of which setup is used and then check the aswers of the corresponding setup
-            switch (counter)
-            {
-                case 1:
-                    /** Calling the CheckAnswer3 method */
-                    CheckAnswer3();
-                    break;
-                case 2:
-                    /** Calling the CheckAnswer1 method */
-                    CheckAnswer1();
-                    break;
-                case 3:
-                    /** Calling the CheckAnswer2 method */
-                    CheckAnswer2();
-                    break;
-            }
-
-            /** Calling the AchievementCheck method */
-            AchievementCheck();
+            /** Calling the AnswerAchievementCheck method */
+            AnswerAchievementCheck();
         }
 
         //----------------------------------------------------------------------------------------------//
@@ -682,17 +693,8 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
                     s = 0;
                     m = 0;
 
-                    //Creating an object of the CustomMessageBox2 form
-                    CustomMessageBox2 customMessageBox2 = new CustomMessageBox2();
-                    //Setting the message to the ran out of time message
-                    customMessageBox2.RanOutOfTimeMessage();
-                    //Showing the CustomMessageBox2 form
-                    customMessageBox2.Show();
-
-                    //Makes the tryAgainBtn button visible
-                    this.playAgainBtn.Visible = true;
-                    //Makes the checkAnswersBtn button invisible
-                    this.checkAnswersBtn.Visible = false;
+                    /** Calling the AnswerAchievementCheck method */
+                    AnswerAchievementCheck();                  
                 }
             }
             catch (Exception ex)
