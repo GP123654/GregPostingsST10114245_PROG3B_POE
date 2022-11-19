@@ -40,6 +40,10 @@ namespace GregPostingsST10114245_PROG3B_POE
 
         #endregion
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 //------------------------------------ooo000 END OF FILE 000ooo---------------------------------------------//

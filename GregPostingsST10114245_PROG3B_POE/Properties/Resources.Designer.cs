@@ -83,6 +83,16 @@ namespace GregPostingsST10114245_PROG3B_POE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Books2 {
+            get {
+                object obj = ResourceManager.GetObject("Books2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bronze_Achievement {
             get {
                 object obj = ResourceManager.GetObject("Bronze Achievement", resourceCulture);

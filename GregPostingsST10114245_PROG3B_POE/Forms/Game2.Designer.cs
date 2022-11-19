@@ -471,6 +471,8 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximumSize = new System.Drawing.Size(1150, 750);
             this.MinimumSize = new System.Drawing.Size(1150, 750);
             this.Name = "Game2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

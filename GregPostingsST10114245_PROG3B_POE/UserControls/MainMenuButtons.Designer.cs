@@ -85,7 +85,6 @@ namespace GregPostingsST10114245_PROG3B_POE
             this.findCallNumBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.findCallNumBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.findCallNumBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.findCallNumBtn.Enabled = false;
             this.findCallNumBtn.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
             this.findCallNumBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.findCallNumBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));

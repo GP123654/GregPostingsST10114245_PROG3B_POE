@@ -111,6 +111,9 @@
       <DependentUpon>Levels.cs</DependentUpon>
     </Compile>
     <Compile Include="Game2Classes\Dictionary.cs" />
+    <Compile Include="Game3Classes\DeweyNumbers.cs" />
+    <Compile Include="Game3Classes\Game3Functionality.cs" />
+    <Compile Include="Game3Classes\RedBlackTreeStructure.cs" />
     <Compile Include="UserControls\BookDrawing.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -229,6 +232,7 @@
     <Content Include="Images\Bronze Achievement.png" />
     <Content Include="Images\Gold Achievement.png" />
     <Content Include="Images\Silver Achievement.png" />
+    <None Include="Resources\Books2.jpg" />
     <None Include="Resources\Bronze Achievement.png" />
     <None Include="Resources\Silver Achievement.png" />
     <None Include="Resources\Gold Achievement.png" />
