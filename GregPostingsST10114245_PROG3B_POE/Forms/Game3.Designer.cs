@@ -121,6 +121,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.checkAnswersBtn.TabIndex = 30;
             this.checkAnswersBtn.Text = "Check Answers";
             this.checkAnswersBtn.UseVisualStyleBackColor = false;
+            this.checkAnswersBtn.Visible = false;
             this.checkAnswersBtn.Click += new System.EventHandler(this.CheckAnswersBtn_Click);
             // 
             // answerRadioBtn1
@@ -353,9 +354,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         private System.Windows.Forms.RadioButton answerRadioBtn2;
         private System.Windows.Forms.RadioButton answerRadioBtn3;
         private System.Windows.Forms.RadioButton answerRadioBtn4;
-        public System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button startBtn;
-        public System.Windows.Forms.Label questionLbl;
         private System.Windows.Forms.Label timeLbl;
         private System.Windows.Forms.Timer game3GameTimer;
         public System.Windows.Forms.Label questionDescriptionLbl;
@@ -364,5 +363,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         private System.Windows.Forms.Label questionNumberTitleLbl;
         private System.Windows.Forms.Label scoreTitleLbl;
         private System.Windows.Forms.Label scoreLbl;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label questionLbl;
     }
 }

@@ -102,6 +102,11 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         /// </summary>
         private TopicLevel currentLevel;
 
+        /// <summary>
+        /// Creating an object of the CustomMessageBox2 form
+        /// </summary>
+        CustomMessageBox2 customMessageBox2 = new CustomMessageBox2();
+
         #endregion
 
 
@@ -177,7 +182,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
                 questionLbl.Text = game3Functionality.RandomlySelectedThirdLevelDesc;
 
                 //Testing
-                MessageBox.Show(game3Functionality.RandomlySelectedThirdLevelNum + game3Functionality.RandomlySelectedThirdLevelDesc);
+                MessageBox.Show(game3Functionality.RandomlySelectedThirdLevelNum + game3Functionality.RandomlySelectedThirdLevelDesc);              //You can use this to know which random selection was made
                 //game3.listBox1.Items.Add(thirdLevelSpecific[SpecificTopic].DeweyNumber + thirdLevelSpecific[SpecificTopic].DeweyDescription);
                 //game3.listBox1.Items.Add(thirdLevelSpecific[SpecificTopic].DeweyDescription);
             }
@@ -186,6 +191,10 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
         public void ThirdLevel()
         {
+            currentLevel = TopicLevel.Third;
+
+            questionDescriptionLbl.Text = "Please select the corresponding third level number\nthat matches the following third level description:";
+
             using (var streamReader = new StreamReader(game3Functionality.filePath))
             {
                 string line;
@@ -213,8 +222,6 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
         public void FourRandomThirdLevel()
         {
-            currentLevel = TopicLevel.Third;
-
             //Getting three random values
             for (int i = 0; i < 3; i++)
             {
@@ -260,10 +267,10 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
             List<DeweyNumbers> sorted = (from ddn in game3Functionality.fourRandomThirdLevelSpecific orderby ddn.DeweyNumber select ddn).ToList();
 
-            answerRadioBtn1.Text = sorted[0].DeweyNumber;// + sorted[0].DeweyDescription;
-            answerRadioBtn2.Text = sorted[1].DeweyNumber;// + sorted[1].DeweyDescription;
-            answerRadioBtn3.Text = sorted[2].DeweyNumber;// + sorted[2].DeweyDescription;
-            answerRadioBtn4.Text = sorted[3].DeweyNumber;// + sorted[3].DeweyDescription;
+            answerRadioBtn1.Text = sorted[0].DeweyNumber;
+            answerRadioBtn2.Text = sorted[1].DeweyNumber;
+            answerRadioBtn3.Text = sorted[2].DeweyNumber;
+            answerRadioBtn4.Text = sorted[3].DeweyNumber;
 
             //Testing
             //for (int i = 0; i < sorted.Count; i++)
@@ -286,6 +293,8 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         public void SecondLevel()
         {
             currentLevel = TopicLevel.Second;
+
+            questionDescriptionLbl.Text = "Please select the corresponding second level topic\nthat matches the following third level topic:";
 
             //This is getting the file location that will be used
             using (var streamReader = new StreamReader(game3Functionality.filePath))
@@ -574,16 +583,8 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
                 //If the timer runs out of time
                 if (m == -1 && s == 60 && ms == 60)
                 {
-                    //Stoping the timer
-                    this.game3GameTimer.Stop();
-
-                    //Sets the time label to 00:00:00
-                    ms = 0;
-                    s = 0;
-                    m = 0;
-
-                    /** Calling the AnswerAchievementCheck method */
-                    //AnswerAchievementCheck();
+                    /** Calling the ClearDataReset Method */
+                    ClearDataReset();
                 }
             }
             catch (Exception ex)
@@ -595,6 +596,12 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
         #endregion
 
+
+        ////////////////////////////////////////////////////////
+        // 
+        ////////////////////////////////////////////////////////
+
+        //Checking Answers
 
         #region Checking Answers
 
@@ -727,33 +734,141 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
 
         public void ClearDataReset()
         {
-            game3Functionality.fourRandomTopLevelSpecific.Clear();
-            game3Functionality.fourRandomSecondLevelSpecific.Clear();
-            game3Functionality.fourRandomThirdLevelSpecific.Clear();
 
-            game3Functionality.topLevelSpecific.Clear();
-            game3Functionality.secondLevelSpecific.Clear();
-            game3Functionality.thirdLevelSpecific.Clear();
+            if (game3Functionality.currentQuestion == 5)
+            {
+                /** Calling the AchievementCheck Method */
+                AchievementCheck();
+                QuestionAndAnswersVisibility(false);
+                timeLbl.Text = "00:00:00";
+            }
+            else
+            {
+                game3Functionality.fourRandomTopLevelSpecific.Clear();
+                game3Functionality.fourRandomSecondLevelSpecific.Clear();
+                game3Functionality.fourRandomThirdLevelSpecific.Clear();
 
+                game3Functionality.topLevelSpecific.Clear();
+                game3Functionality.secondLevelSpecific.Clear();
+                game3Functionality.thirdLevelSpecific.Clear();
+                game3Functionality.thirdLevel.Clear();
 
-            game3Functionality.RandomlySelectedThirdLevelDesc = "";
-            game3Functionality.RandomlySelectedThirdLevelNum = "";
+                game3Functionality.RandomlySelectedThirdLevelDesc = "";
+                game3Functionality.RandomlySelectedThirdLevelNum = "";
 
-            game3Functionality.currentQuestion = game3Functionality.currentQuestion + 1;
-            questionNumberLbl.Text = game3Functionality.currentQuestion.ToString();
+                game3Functionality.currentQuestion = game3Functionality.currentQuestion + 1;
+                questionNumberLbl.Text = game3Functionality.currentQuestion.ToString();
 
-            UnCheckRadioButtons();
+                UnCheckRadioButtons();
 
-            ThirdLevelSpecific();
-            TopLevel();
+                ThirdLevelSpecific();
+                TopLevel();
 
+                //Resetting the timer
+                this.ms = 1;
+                this.s = 50;
+                this.m = 0;
+            }
             
-
-            //Resetting the timer
-            this.ms = 1;
-            this.s = 50;
-            this.m = 0;
         }
+
+
+
+
+
+
+        ////////////////////////////////////////////////////////
+        // This will get the users number of correct answers and
+        // depending on their score they will be shown a message
+        // to congradulate them and give them an achievement.
+        // Unless they never got any answers correct.
+        ////////////////////////////////////////////////////////
+
+        //Achievement Methods
+
+        #region Achievements
+
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// Setting the text of the congradulations message
+        /// </summary>
+        public void CustomMessageBox()
+        {
+            //Setting the message for the congradulations message and letting the user know their score
+            customMessageBox2.messageTextLbl.Text = "Well done. You completed the challange. Your score was: " +
+                game3Functionality.score + "/30 \n" + " Here is a badge for you. :)";
+        }
+
+        //----------------------------------------------------------------------------------------------//
+        /// <summary>
+        /// This just deterimnes the achievement awarded determied by the users
+        /// score as well as the message they recieve
+        /// </summary>
+        public void AchievementCheck()
+        {
+            try
+            {
+                //Stops the game2GameTimer timer
+                this.game3GameTimer.Stop();
+                //Makes the playAgainBtn Button visible
+                this.playAgainBtn.Visible = true;
+                //Makes the checkAnswersBtn Button invisible
+                this.checkAnswersBtn.Visible = false;
+
+                //Setting the message for the congradulations message
+                customMessageBox2.CongradulationsMessage();
+                CustomMessageBox();
+
+                //If the score is more than 20
+                if (game3Functionality.score > 20)
+                {
+                    //Shows the achievementImage1 gold achievement image
+                    customMessageBox2.achievementImage1.Visible = true;
+                }
+                //If the score is more than 10 and lass than or equal to 20
+                else if (game3Functionality.score > 10 && game3Functionality.score <= 20)
+                {
+                    //Shows the achievementImage2 silver achievement image
+                    customMessageBox2.achievementImage2.Visible = true;
+                }
+                //Otherwise if the score is more than or equal to 5 and less than or equal to 10
+                else if (game3Functionality.score >= 5 && game3Functionality.score <= 10)
+                {
+                    //Shows the achievementImage3 bronze achievement image
+                    customMessageBox2.achievementImage3.Visible = true;
+                }
+                //If the score is less than 5
+                else if (game3Functionality.score < 5)
+                {
+                    //Setting the title for the unsuccessful message
+                    customMessageBox2.messageTitleLbl.Text = "Oh No !!!";
+                    //Setting the message for the unsuccessful message
+                    customMessageBox2.messageTextLbl.Text = "Unfortunately you did not get an achievement";
+
+                    //Making all the achievement invisible
+                    customMessageBox2.achievementImage1.Visible = false;
+                    customMessageBox2.achievementImage2.Visible = false;
+                    customMessageBox2.achievementImage3.Visible = false;
+                }
+
+                //Showing the CustomMessageBox2 form
+                customMessageBox2.Show();
+
+            }
+            catch (Exception ex)
+            {
+                //Error message
+                MessageBox.Show("Error is: " + ex);
+            }
+        }
+
+
+        #endregion
+
+
+
+
+
 
 
         //----------------------------------------------------------------------------------------------//
@@ -785,6 +900,8 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         {
             game3GameTimer.Start();
             startBtn.Visible = false;
+            //Makes the checkAnswersBtn Button invisible
+            this.checkAnswersBtn.Visible = true;
             QuestionAndAnswersVisibility(true);
 
             ThirdLevelSpecific();
@@ -810,7 +927,39 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         private void PlayAgainBtn_Click(object sender, EventArgs e)
         {
 
+            //Resetting the timer
+            this.ms = 1;
+            this.s = 50;
+            this.m = 0;
+
+            game3Functionality.score = 0;
+            game3Functionality.currentQuestion = 1;
+
+            scoreLbl.Text = "0";
+            questionNumberLbl.Text = "1";           
+
+            game3Functionality.fourRandomTopLevelSpecific.Clear();
+            game3Functionality.fourRandomSecondLevelSpecific.Clear();
+            game3Functionality.fourRandomThirdLevelSpecific.Clear();
+
+            game3Functionality.topLevelSpecific.Clear();
+            game3Functionality.secondLevelSpecific.Clear();
+            game3Functionality.thirdLevelSpecific.Clear();
+            game3Functionality.thirdLevel.Clear();
+
+            game3Functionality.RandomlySelectedThirdLevelDesc = "";
+            game3Functionality.RandomlySelectedThirdLevelNum = "";
+
+            ThirdLevelSpecific();
+            TopLevel();
+
+
+            game3GameTimer.Start();
+            playAgainBtn.Visible = false;
+            checkAnswersBtn.Visible = true;
+            QuestionAndAnswersVisibility(true);
         }
+
     }
 }
 //---------------------------------------ooo000 END OF FILE 000ooo--------------------------------------//
