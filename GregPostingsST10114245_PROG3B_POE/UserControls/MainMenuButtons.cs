@@ -103,7 +103,7 @@ namespace GregPostingsST10114245_PROG3B_POE
                 //Hiding the Main Menu / Form1 form
                 this.ParentForm.Hide();
 
-                //Creating an object of the CustomMessageBox form
+                //Creating an object of the CustomMessageBox3 form
                 CustomMessageBox3cs cmb3 = new CustomMessageBox3cs();
                 //Shows the instructions in the custom message box
                 cmb3.Show();
@@ -131,6 +131,11 @@ namespace GregPostingsST10114245_PROG3B_POE
                 game3.Show();
                 //Hiding the Main Menu / Form1 form
                 this.ParentForm.Hide();
+
+                //Creating an object of the CustomMessageBox4 form
+                CustomMessageBox4 cmb4 = new CustomMessageBox4();
+                //Shows the instructions in the custom message box
+                cmb4.Show();
             }
             catch(Exception ex)
             {

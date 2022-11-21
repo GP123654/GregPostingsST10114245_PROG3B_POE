@@ -137,6 +137,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.answerRadioBtn1.Text = "This is an answer for the question";
             this.answerRadioBtn1.UseVisualStyleBackColor = true;
             this.answerRadioBtn1.Visible = false;
+            this.answerRadioBtn1.CheckedChanged += new System.EventHandler(this.AnswerRadioBtn1_CheckedChanged);
             // 
             // answerRadioBtn2
             // 
@@ -151,6 +152,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.answerRadioBtn2.Text = "This is an answer for the question";
             this.answerRadioBtn2.UseVisualStyleBackColor = true;
             this.answerRadioBtn2.Visible = false;
+            this.answerRadioBtn2.CheckedChanged += new System.EventHandler(this.AnswerRadioBtn2_CheckedChanged);
             // 
             // answerRadioBtn3
             // 
@@ -165,6 +167,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.answerRadioBtn3.Text = "This is an answer for the question";
             this.answerRadioBtn3.UseVisualStyleBackColor = true;
             this.answerRadioBtn3.Visible = false;
+            this.answerRadioBtn3.CheckedChanged += new System.EventHandler(this.AnswerRadioBtn3_CheckedChanged);
             // 
             // answerRadioBtn4
             // 
@@ -179,6 +182,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.answerRadioBtn4.Text = "This is an answer for the question";
             this.answerRadioBtn4.UseVisualStyleBackColor = true;
             this.answerRadioBtn4.Visible = false;
+            this.answerRadioBtn4.CheckedChanged += new System.EventHandler(this.AnswerRadioBtn4_CheckedChanged);
             // 
             // listBox1
             // 
@@ -337,6 +341,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
             this.Name = "Game3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Find That Call Number";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game3_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

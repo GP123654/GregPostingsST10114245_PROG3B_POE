@@ -98,6 +98,7 @@ namespace GregPostingsST10114245_PROG3B_POE
             this.findCallNumBtn.Size = new System.Drawing.Size(220, 40);
             this.findCallNumBtn.TabIndex = 2;
             this.findCallNumBtn.Text = "Finding Call Numbers";
+            this.buttonToolTip1.SetToolTip(this.findCallNumBtn, "Find Call Numbers");
             this.findCallNumBtn.UseVisualStyleBackColor = false;
             this.findCallNumBtn.Click += new System.EventHandler(this.FindCallNumBtn_Click);
             // 

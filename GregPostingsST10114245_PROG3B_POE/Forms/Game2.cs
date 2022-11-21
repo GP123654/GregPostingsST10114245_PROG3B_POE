@@ -1229,7 +1229,7 @@ namespace GregPostingsST10114245_PROG3B_POE.Forms
         // This is for when the Game2 form is closing.
         ////////////////////////////////////////////////////////
 
-        //BoringGameOne Form Closing Method
+        //Game2 Form Closing Method
 
         #region Game2 Form Closing Method
 

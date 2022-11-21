@@ -1,0 +1,555 @@
+﻿075 / Newspapers in Italy & adjacent islands
+001 / Knowledge
+095 / Books notable for bindings
+063 / Organizations in central Europe; in Germany
+034 / Encyclopedias in French, Occitan & Catalan
+002 / The book
+060 / Associations, organizations & museums
+003 / Systems
+092 / Block books
+004 / Data processing & computer science
+023 / Personnel management
+005 / Computer programming, programs & data
+010 / Bibliographies
+072 / Newspapers in British Isles; in England
+014 / Of anonymous & pseudonymous works
+033 / In other Germanic languages
+012 / Bibliographies of individuals
+083 / Collections in other Germanic languages
+020 / Library & information sciences
+090 / Manuscripts & rare books
+021 / Library relationships
+015 / Bibliographies of works from specific places
+094 / Printed books
+022 / Administration of physical plant
+055 / In Italian, Romanian & related languages
+025 / Library operations
+093 / Incunabula
+030 / Encyclopedias & books of facts
+091 / Manuscripts
+031 / Encyclopedias in American English
+081 / Collections in American English
+032 / Encyclopedias in English
+085 / In Italian, Romanian & related languages
+035 / In Italian, Romanian & related languages
+084 / Collections in French, Occitan & Catalan
+050 / Magazines, journals & serials
+082 / Collections in English
+051 / Serials in American English
+080 / Quotations
+052 / Serials in English
+074 / Newspapers in France & Monaco
+053 / Serials in other Germanic languages
+073 / Newspapers in central Europe; in Germany
+054 / Serials in French, Occitan & Catalan
+071 / Newspapers in North America
+061 / Organizations in North America
+070 / News media, journalism & publishing
+062 / Organizations in British Isles; in England
+065 / Organizations in Italy & adjacent islands
+011 / Bibliographies
+064 / Organizations in France & Monaco
+000 / General knowledge
+100 / Psychology and Philosophy
+175 / Ethics of recreation & leisure
+101 / Theory of philosophy
+195 / Philosophy of Italy
+102 / Miscellany
+162 / Deduction
+103 / Dictionaries & encyclopedias
+135 / Dreams & mysteries
+105 / Serial publications
+161 / Induction
+110 / Metaphysics
+165 / Fallacies & sources of error
+111 / Ontology
+113 / Cosmology
+114 / Space
+115 / Time
+120 / Epistemology
+173 / Ethics of family relationships
+174 / Occupational ethics
+180 / Ancient, medieval & eastern philosophy
+181 / Eastern philosophy
+182 / Pre-Socratic Greek philosophies
+183 / Socratic & related philosophies
+184 / Platonic philosophy
+185 / Aristotelian philosophy
+190 / Modern western philosophy
+191 / Philosophy of United States & Canada
+192 / Philosophy of British Isles
+193 / Philosophy of Germany & Austria
+194 / Philosophy of France
+121 / Epistemology
+122 / Causation
+123 / Determinism & indeterminism
+124 / Teleology
+130 / Parapsychology & occultism
+131 / Parapsychological & occult methods
+133 / Specific topics in parapsychology & occultism
+140 / Philosophical schools of thought
+141 / Idealism & related systems
+142 / Critical philosophy
+143 / Bergsonism & intuitionism
+144 / Humanism & related systems
+145 / Sensationalism
+150 / Psychology
+152 / Perception, movement, emotions & drives
+153 / Mental processes & intelligence
+154 / Subconscious & altered states
+155 / Differential & developmental psychology
+160 / Logic
+170 / Ethics
+171 / Ethical systems
+172 / Political ethics
+200 / Religions and Mythology
+201 / Religious mythology & social theology
+202 / Doctrines
+203 / Public worship & other practices
+204 / Religious experience, life & practice
+205 / Religious ethics
+210 / Philosophy & theory of religion
+211 / Concepts of God
+212 / Existence, knowability & attributes of God
+213 / Creation
+214 / Theodicy
+215 / Science & religion
+261 / Social theology
+262 / Ecclesiology
+263 / Days, times & places of observance
+264 / Public worship
+265 / Sacraments, other rites & acts
+270 / History of Christianity
+271 / Religious orders in church history
+272 / Persecutions in church history
+273 / Doctrinal controversies & heresies
+274 / History of Christianity in Europe
+275 / History of Christianity in Asia
+280 / Christian denominations
+281 / Early church & Eastern churches
+282 / Roman Catholic Church
+283 / Anglican churches
+284 / Protestants of Continental origin
+285 / Presbyterian, Reformed & Congregational
+290 / Other religions
+292 / Greek & Roman religion
+293 / Germanic religion
+294 / Religions of Indic origin
+295 / Zoroastrianism
+220 / The Bible
+221 / Old Testament (Tanakh)
+222 / Historical books of Old Testament
+223 / Poetic books of Old Testament
+224 / Prophetic books of Old Testament
+225 / New Testament
+230 / Christianity & Christian theology
+231 / God
+232 / Jesus Christ & his family
+233 / Humankind
+234 / Salvation & grace
+235 / Spiritual beings
+240 / Christian practice & observance
+241 / Christian ethics
+242 / Devotional literature
+243 / Evangelistic writings for individuals
+250 / Christian pastoral practice & religious orders
+251 / Preaching
+252 / Texts of sermons
+253 / Pastoral office & work
+254 / Parish administration
+255 / Religious congregations & orders
+260 / Christian organization, social work & worship
+300 / Social Sciences and Folklore
+353 / Specific fields of public administration
+354 / Administration of economy & environment
+355 / Military science
+360 / Social problems & social services
+361 / Social problems & social welfare in general
+362 / Social welfare problems & services
+363 / Other social problems & services
+364 / Criminology
+365 / Penal & related institutions
+370 / Education
+371 / Schools & their activities; special education
+372 / Elementary education
+373 / Secondary education
+374 / Adult education
+301 / Sociology & anthropology
+302 / Social interaction
+303 / Social processes
+304 / Factors affecting social behavior
+305 / Social groups
+310 / Statistics
+314 / General statistics of Europe
+315 / General statistics of Asia
+320 / Political science
+321 / Systems of governments & states
+322 / Relation of state to organized groups
+323 / Civil & political rights
+324 / The political process
+325 / International migration & colonization
+330 / Economics
+331 / Labor economics
+332 / Financial economics
+333 / Economics of land & energy
+334 / Cooperatives
+335 / Socialism & related systems
+340 / Law
+341 / Law of nations
+342 / Constitutional & administrative law
+343 / Military, tax, trade & industrial law
+344 / Labor, social, education & cultural law
+345 / Criminal law
+350 / Public administration & military science
+351 / Public administration
+352 / General considerations of public administration
+375 / Curricula
+380 / Commerce, communications & transportation
+381 / Commerce
+382 / International commerce
+383 / Postal communication
+384 / Communications; telecommunication
+385 / Railroad transportation
+390 / Customs, etiquette & folklore
+391 / Costume & personal appearance
+392 / Customs of life cycle & domestic life
+393 / Death customs
+394 / General customs
+395 / Etiquette (Manners)
+400 / Languages and Grammar
+445 / French grammar
+450 / Italian, Romanian & related languages
+451 / Italian writing systems & phonology
+452 / Italian etymology
+453 / Italian dictionaries
+455 / Italian grammar
+460 / Spanish & Portuguese languages
+461 / Spanish writing systems & phonology
+462 / Spanish etymology
+463 / Spanish dictionaries
+465 / Spanish grammar
+470 / Latin & Italic languages
+471 / Classical Latin writing & phonology
+472 / Classical Latin etymology
+401 / Philosophy & theory
+402 / Miscellany
+403 / Dictionaries & encyclopedias
+404 / Special topics
+405 / Serial publications
+410 / Linguistics
+411 / Writing systems
+412 / Etymology
+413 / Dictionaries
+414 / Phonology & phonetics
+415 / Grammar
+420 / English & Old English languages
+421 / English writing system & phonology
+422 / English etymology
+423 / English dictionaries
+425 / English grammar
+430 / German & related languages
+431 / German writing systems & phonology
+432 / German etymology
+433 / German dictionaries
+435 / German grammar
+440 / French & related languages
+441 / French writing systems & phonology
+442 / French etymology
+443 / French dictionaries
+473 / Classical Latin dictionaries
+475 / Classical Latin grammar
+480 / Classical & modern Greek languages
+481 / Classical Greek writing & phonology
+482 / Classical Greek etymology
+483 / Classical Greek dictionaries
+485 / Classical Greek grammar
+490 / Other languages
+491 / East Indo-European & Celtic languages
+492 / Afro-Asiatic languages; Semitic languages
+493 / Non-Semitic Afro-Asiatic languages
+494 / Altaic, Uralic, Hyperborean & Dravidian
+495 / Languages of East & Southeast Asia
+500 / Math and Science
+541 / Physical chemistry
+542 / Techniques, equipment & materials
+543 / Analytical chemistry
+550 / Earth sciences & geology
+551 / Geology, hydrology & meteorology
+552 / Petrology
+553 / Economic geology
+554 / Earth sciences of Europe
+555 / Earth sciences of Asia
+560 / Fossils & prehistoric life
+561 / Paleobotany; fossil microorganisms
+562 / Fossil invertebrates
+563 / Fossil marine & seashore invertebrates
+564 / Fossil mollusks & molluscoids
+565 / Fossil arthropods
+570 / Life sciences; biology
+571 / Physiology & related subjects
+501 / Philosophy & theory
+502 / Miscellany
+503 / Dictionaries & encyclopedias
+505 / Serial publications
+510 / Mathematics
+511 / General principles of mathematics
+512 / Algebra
+513 / Arithmetic
+514 / Topology
+515 / Analysis
+520 / Astronomy
+521 / Celestial mechanics
+522 / Techniques, equipment & materials
+523 / Specific celestial bodies & phenomena
+525 / Earth (Astronomical geography)
+530 / Physics
+531 / Classical mechanics; solid mechanics
+532 / Fluid mechanics; liquid mechanics
+533 / Gas mechanics
+534 / Sound & related vibrations
+535 / Light & infrared & ultraviolet phenomena
+540 / Chemistry
+572 / Biochemistry
+573 / Specific physiological systems in animals
+575 / Specific parts of & systems in plants
+580 / Plants (Botany)
+581 / Specific topics in natural history
+582 / Plants noted for characteristics & flowers
+583 / Dicotyledons
+584 / Monocotyledons
+585 / Gymnosperms; conifers
+590 / Animals (Zoology)
+591 / Specific topics in natural history
+592 / Invertebrates
+593 / Marine & seashore invertebrates
+594 / Mollusks & molluscoids
+595 / Arthropods
+600 / Medicine and Technology
+645 / Household furnishings
+650 / Management & public relations
+651 / Office services
+652 / Processes of written communication
+653 / Shorthand
+660 / Chemical engineering
+661 / Industrial chemicals
+662 / Explosives, fuels & related products
+663 / Beverage technology
+664 / Food technology
+665 / Industrial oils, fats, waxes & gases
+670 / Manufacturing
+671 / Metalworking & primary metal products
+672 / Iron, steel & other iron alloys
+673 / Nonferrous metals
+674 / Lumber processing, wood products & cork
+675 / Leather & fur processing
+601 / Philosophy & theory
+602 / Miscellany
+603 / Dictionaries & encyclopedias
+604 / Special topics
+605 / Serial publications
+610 / Medicine & health
+611 / Human anatomy, cytology & histology
+612 / Human physiology
+613 / Personal health & safety
+614 / Incidence & prevention of disease
+615 / Pharmacology & therapeutics
+620 / Engineering
+621 / Applied physics
+622 / Mining & related operations
+623 / Military & nautical engineering
+624 / Civil engineering
+625 / Engineering of railroads & roads
+630 / Agriculture
+631 / Techniques, equipment & materials
+632 / Plant injuries, diseases & pests
+633 / Field & plantation crops
+634 / Orchards, fruits & forestry
+635 / Garden crops (Horticulture)
+640 / Home & family management
+641 / Food & drink
+642 / Meals & table service
+643 / Housing & household equipment
+644 / Household utilities
+680 / Manufacture for specific uses
+681 / Precision instruments & other devices
+682 / Small forge work (Blacksmithing)
+683 / Hardware & household appliances
+684 / Furnishings & home workshops
+685 / Leather, fur goods & related products
+690 / Building & construction
+691 / Building materials
+692 / Auxiliary construction practices
+693 / Specific materials & purposes
+694 / Wood construction & carpentry
+695 / Roof covering
+700 / Arts and Recreation
+750 / Painting
+751 / Techniques, equipment, materials & forms
+752 / Color
+753 / Symbolism, allegory, mythology & legend
+754 / Genre paintings
+755 / Religion
+760 / Graphic arts
+761 / Relief processes (Block printing)
+763 / Lithographic processes
+764 / Chromolithography & serigraphy
+765 / Metal engraving
+770 / Photography & computer art
+771 / Techniques, equipment & materials
+772 / Metallic salt processes
+773 / Pigment processes of printing
+774 / Holography
+775 / Digital photography
+701 / Philosophy of fine & decorative arts
+702 / Miscellany of fine & decorative arts
+703 / Dictionaries of fine & decorative arts
+704 / Special topics in fine & decorative arts
+705 / Serial publications of fine & decorative arts
+710 / Landscaping & area planning
+711 / Area planning
+712 / Landscape architecture
+713 / Landscape architecture of trafficways
+714 / Water features
+715 / Woody plants
+720 / Architecture
+721 / Architectural structure
+722 / Architecture to ca. 300
+723 / Architecture from ca. 300 to 1399
+724 / Architecture from 1400
+725 / Public structures
+730 / Sculpture, ceramics & metalwork
+731 / Processes, forms & subjects of sculpture
+732 / Sculpture to ca. 500
+733 / Greek, Etruscan & Roman sculpture
+734 / Sculpture from ca. 500 to 1399
+735 / Sculpture from 1400
+740 / Drawing & decorative arts
+741 / Drawing & drawings
+742 / Perspective
+743 / Drawing & drawings by subject
+745 / Decorative arts
+780 / Music
+781 / General principles & musical forms
+782 / Vocal music
+783 / Music for single voices; the voice
+784 / Instruments & instrumental ensembles
+785 / Ensembles with one instrument per part
+790 / Sports, games & entertainment
+791 / Public performances
+792 / Stage presentations
+793 / Indoor games & amusements
+794 / Indoor games of skill
+795 / Games of chance
+800 / Literature
+845 / French speeches
+850 / Italian, Romanian & related literatures
+851 / Italian poetry
+852 / Italian drama
+853 / Italian fiction
+854 / Italian essays
+855 / Italian speeches
+860 / Spanish & Portuguese literatures
+861 / Spanish poetry
+862 / Spanish drama
+863 / Spanish fiction
+864 / Spanish essays
+865 / Spanish speeches
+870 / Latin & Italic literatures
+871 / Latin poetry
+872 / Latin dramatic poetry & drama
+873 / Latin epic poetry & fiction
+874 / Latin lyric poetry
+875 / Latin speeches
+801 / Philosophy & theory
+802 / Miscellany
+803 / Dictionaries & encyclopedias
+805 / Serial publications
+810 / American literature in English
+811 / American poetry in English
+812 / American drama in English
+813 / American fiction in English
+814 / American essays in English
+815 / American speeches in English
+820 / English & Old English literatures
+821 / English poetry
+822 / English drama
+823 / English fiction
+824 / English essays
+825 / English speeches
+830 / German & related literatures
+831 / German poetry
+832 / German drama
+833 / German fiction
+834 / German essays
+835 / German speeches
+840 / French & related literatures
+841 / French poetry
+842 / French drama
+843 / French fiction
+844 / French essays
+880 / Classical & modern Greek literatures
+881 / Classical Greek poetry
+882 / Classical Greek dramatic poetry & drama
+883 / Classical Greek epic poetry & fiction
+884 / Classical Greek lyric poetry
+885 / Classical Greek speeches
+890 / Other literatures
+891 / East Indo-European & Celtic literatures
+892 / Afro-Asiatic literatures; Semitic literatures
+893 / Non-Semitic Afro-Asiatic literatures
+894 / Altaic, Uralic, Hyperborean & Dravidian
+895 / Literatures of East & Southeast Asia
+900 / Geography and History
+950 / History of Asia
+951 / China & adjacent areas
+952 / Japan
+953 / Arabian Peninsula & adjacent areas
+954 / South Asia; India
+955 / Iran
+960 / History of Africa
+961 / Tunisia & Libya
+962 / Egypt & Sudan
+963 / Ethiopia & Eritrea
+964 / Northwest African coast & offshore islands
+965 / Algeria
+970 / History of North America
+971 / Canada
+972 / Middle America; Mexico
+973 / United States
+974 / Northeastern United States
+975 / Southeastern United States
+901 / Philosophy & theory
+902 / Miscellany
+903 / Dictionaries & encyclopedias
+904 / Collected accounts of events
+905 / Serial publications
+910 / Geography & travel
+911 / Historical geography
+912 / Atlases, maps, charts & plans
+913 / Geography of & travel in ancient world
+914 / Geography of & travel in Europe
+915 / Geography of & travel in Asia
+920 / Biography & genealogy
+930 / History of ancient world (to ca. 499)
+931 / China to 420
+932 / Egypt to 640
+933 / Palestine to 70
+934 / India to 647
+935 / Mesopotamia & Iranian Plateau to 637
+940 / History of Europe
+941 / British Isles
+942 / England & Wales
+943 / Central Europe; Germany
+944 / France & Monaco
+945 / Italian Peninsula & adjacent islands
+980 / History of South America
+981 / Brazil
+982 / Argentina
+983 / Chile
+984 / Bolivia
+985 / Peru
+990 / History of other areas
+993 / New Zealand
+994 / Australia
+995 / Melanesia; New Guinea
+

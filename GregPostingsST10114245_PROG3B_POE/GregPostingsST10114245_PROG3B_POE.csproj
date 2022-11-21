@@ -74,6 +74,12 @@
     <Compile Include="Forms\CustomMessageBox3cs.Designer.cs">
       <DependentUpon>CustomMessageBox3cs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CustomMessageBox4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomMessageBox4.Designer.cs">
+      <DependentUpon>CustomMessageBox4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     <EmbeddedResource Include="Forms\CustomMessageBox3cs.resx">
       <DependentUpon>CustomMessageBox3cs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomMessageBox4.resx">
+      <DependentUpon>CustomMessageBox4.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +241,7 @@
     <Content Include="Images\Bronze Achievement.png" />
     <Content Include="Images\Gold Achievement.png" />
     <Content Include="Images\Silver Achievement.png" />
+    <Content Include="TextFile\RedBlack.txt" />
     <None Include="Resources\Books2.jpg" />
     <None Include="Resources\Bronze Achievement.png" />
     <None Include="Resources\Silver Achievement.png" />
